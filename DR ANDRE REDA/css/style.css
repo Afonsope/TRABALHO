@@ -1,0 +1,2107 @@
+    /* INPORT GOOGLE FONT - POPPINS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h5, h6 {
+    font-weight: bold;
+}
+
+/* VARIAVEIS */
+:root {
+    --cor-branco: #ffffff;
+    --cor-principal: #534937;
+    --cor-secundaria: #93805e;
+    --cor-feedback: #534937;
+}
+
+/* NAVBAR */
+.marrom {
+    color: var(--cor-principal);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--cor-principal);
+    padding-right: 30px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--cor-secundaria);
+}
+
+.navbar-light .navbar-nav .btn, p a {
+    color: var(--cor-branco);
+    background-color: var(--cor-principal);
+    border-radius: 25px;
+}
+
+.navbar-light .navbar-nav .btn:hover, p a:hover {
+    color: var(--cor-branco); 
+    background-color: var(--cor-secundaria);
+}
+
+/* hOME */
+#home {
+    position: relative; /* Contêiner pai precisa ser relativo */
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/clinica.png);
+    background-size: cover;
+    padding: 15px 0px;
+}
+
+#home h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    color: var(--cor-branco);
+    padding-right: 30px;
+    text-shadow: 2px 4px 5px black; /* SOMBRA EM UM TEXTO */
+     /* 1-horizontal| 2-vertical| 3-nitidez| 4-espalha a sombra*/
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h1, p {
+    margin-top: 10px;
+    color: var(--cor-branco)
+}
+
+.btn-block {
+    border-radius: 25px;
+}
+
+.perfil {
+    width: 350px;
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    z-index: 2 !important;
+}
+
+.triangle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Pontos do clip-path ajustados para a forma desejada */
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    
+    background: var(--cor-principal);
+    z-index: 1;
+}
+
+/* PROCEDIMENTOS */
+#procedimento h2,
+#qualidade h2,
+#sobre h2,
+#feedback h2,
+#formulario h2 {
+    margin: 50px 0 25px 20px;
+    font-size: 2.5em;
+    font-family: 'Raleway';
+}
+
+#procedimento h2 {
+    color: var(--cor-principal);
+}
+
+#procedimento p,
+#qualidade p,
+#sobre p,
+#feedback p,
+#formulario p {
+    margin: 0 20px 25px 20px;
+    line-height: 1.6;
+}
+
+.procedimento h3, .procedimento p {
+    margin-left: 20px;
+}
+
+/* slider section  */
+.slider {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    max-width: 100vw;
+}
+
+.slider .list .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slider .list .item .content {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    max-width: 1140px;
+    right: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: var(--cor-principal);
+    text-shadow: 0 5px 10px #0004;
+    overflow: hidden;
+    text-align: right;
+}
+
+.slider .list .item .content .description {
+    color: #000;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-align: right;
+    margin-left: auto;
+    width: 60%;
+}
+
+.slider .list .item .content .title,
+.slider .list .item .content .type {
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+    text-align: right;
+}
+
+.slider .list .item .type{
+    color: var(--cor-secundaria);
+}
+.slider .list .item .button{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.slider .list .item .button button{
+    border: none;
+    background-color: #eee;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.4s;
+    letter-spacing: 2px;
+}
+
+
+.slider .list .item .button button:hover{
+    letter-spacing: 3px;
+}
+.slider .list .item .button button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+
+
+
+
+/* Thumbnail Section */
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* nextPrevArrows Section  */
+.nextPrevArrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.nextPrevArrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--cor-principal);
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+.nextPrevArrows button:hover{
+    background-color: var(--cor-secundaria);
+}
+
+/* Animation Part */
+.slider .list .item:nth-child(1){
+    z-index: 1;
+}
+
+
+/* animation text in first item */
+.slider .list .item:nth-child(1) .content .title,
+.slider .list .item:nth-child(1) .content .type,
+.slider .list .item:nth-child(1) .content .description,
+.slider .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.slider .list .item:nth-child(1) .content .title{
+    animation-delay: 0.4s !important;
+}
+.slider .list .item:nth-child(1) .content .type{
+    animation-delay: 0.6s !important;
+}
+.slider .list .item:nth-child(1) .content .description{
+    animation-delay: 0.8s !important;
+}
+.slider .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1s !important;
+}
+
+
+
+
+/* Animation for next button click */
+.slider.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.slider.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.slider.prev .list .item img{
+    z-index: 100;
+}
+
+
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+
+.slider.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+
+
+/* Animation for prev button click */
+.slider.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.slider.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.slider.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.slider.next .nextPrevArrows button,
+.slider.prev .nextPrevArrows button{
+    pointer-events: none;
+}
+
+
+.slider.prev .list .item:nth-child(2) .content .title,
+.slider .prev .list .item:nth-child(2) .content .type,
+.slider.prev .list .item:nth-child(2) .content .description,
+.slider.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .slider .list .item .content{
+        padding-right: 0;
+    }
+    .slider .list .item .content .title{
+        font-size: 50px;
+    }
+}
+
+.slider .list .item .content {
+    overflow: hidden; /* Evita que o texto "escape" da área */
+}
+
+.slider .list .item .content .description {
+    font-size: 15px; /* (opcional) Ajuste o tamanho para caber melhor */
+    max-width: 530px;
+    overflow-y: auto; /* Adiciona scroll se passar do limite */
+    padding-right: 15px; /* (opcional) Dá um espacinho para o texto não colar na borda */
+}
+
+.slider .list .item .content .title {
+    font-family: 'Gilda Display', sans-serif;
+}
+
+/* SOBRE */
+#sobre {
+    padding: 60px 20px;
+}
+
+#doutor {
+    color: var(--cor-principal);
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+    margin-left: 20px;
+}
+
+#crm {
+    color: var(--cor-secundaria);
+    font-size: 1.1rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;
+    margin-left: 20px;
+}
+
+#crm::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--cor-principal);
+}
+
+.foto-no-escritorio {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+}
+
+.biografia {
+    background: var(--cor-principal);
+    color: #fff;
+    line-height: 1.7;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.biografia p {
+    margin: 0 20px 1.5rem;
+}
+
+.biografia p:last-child {
+    margin-bottom: 0;
+}
+
+/* INSTITUICOES */
+.instituicoes {
+    margin-top: -50px;
+  }
+
+  
+  .logos-parceiros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo-item {
+    flex: 0 1 160px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-instituicao {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  
+  .logo-item:hover .logo-instituicao {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .logos-parceiros {
+      gap: 20px;
+    }
+    
+    .logo-item {
+      flex-basis: 120px;
+      padding: 10px;
+    }
+    
+    .titulo-instituicoes {
+      font-size: 1.2rem;
+    }
+  }
+
+@media (max-width: 768px) {
+    #doutor {
+        font-size: 2rem;
+    }
+    
+    #crm {
+        font-size: 1rem;
+    }
+    
+    .biografia {
+        padding: 20px;
+    }
+}
+
+/* Ajuste específico para o logo da UNICAMP */
+.logos-parceiros .logo-item:first-child .logo-instituicao {
+    max-width: 65px; /* Tamanho reduzido */
+    width: 100%;
+  }
+  
+  /* Mantém o tamanho padrão para os outros */
+  .logos-parceiros .logo-item:not(:first-child) .logo-instituicao {
+    max-width: 100%; /* Mantém o tamanho original dos demais */
+  }
+  
+  /* Ajuste para mobile */
+  @media (max-width: 768px) {
+    .logos-parceiros .logo-item:first-child .logo-instituicao {
+      max-width: 60px;
+    }
+  }
+
+/* FEEDBACK */
+.qualidade h2 {
+    margin: 50px 0 5px 20px;
+    color: var(--cor-principal);
+}
+
+.numero-animado {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+    margin: 20px 0;
+  }
+  
+  .numero-animado.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+#feedback {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#qualidade .flex-container {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+#qualidade .col-sm-4 {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+    text-align: left;
+}
+
+#qualidade .col-sm-4 h5 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#qualidade .col-sm-4 p {
+    margin: 0;
+    text-align: left;
+}
+
+h5 {
+    margin-top: 50px;
+    margin-bottom: 5px;
+    color: var(--cor-principal);
+    padding-right: 30px;
+}
+
+h5 img {
+    text-align: center;
+    width: 25px;
+    margin: 5px;
+}
+
+.qualidade p {
+    color: #000;
+    margin: 0 30px 50px 20px;
+}
+
+/* FEEDBACK */
+#feedback {
+    background: var(--cor-secundaria);
+    padding: 0 20px;
+    padding-bottom: 25px;
+}
+
+.feedback h2, .formulario h2 {
+    margin: 30px 0 0 20px;
+    color: var(--cor-feedback);
+}
+
+.opniao {
+    background: var(--cor-branco);
+    margin: 0;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.opniao p, #formulario p {
+    color: #000;
+    padding: 0 10px;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+.avaliacao {
+    margin-top: 15px;
+}
+
+.logo-google {
+    max-width: 30px;
+}
+
+.autor {
+    float: right;
+}
+
+/* FORMULARIO */
+#formulario {
+    background: var(--cor-branco);
+}
+
+input[type="radio"] {
+    accent-color: var(--cor-principal); /* Coloque a cor que quiser aqui */
+  }
+
+.formulario .btn:hover {
+    background: #6e592e;
+}
+
+/* Aumento mínimo do botão */
+#formulario .btn:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2) !important;
+}
+
+#formulario .btn:hover img {
+    transform: scale(1.1) !important;
+}
+
+
+#formulario .btn {
+    border-radius: 50px;
+    padding: 0.95em 1.9em !important;  /* 5% maior que o original */
+    font-size: 1.03em !important;      /* 3% maior */
+    letter-spacing: 0.3px;             /* Melhora legibilidade */
+}
+
+#formulario .btn img {
+    width: 26px !important;  /* 4% maior que 25px original */
+    height: 26px !important;
+}
+
+/* Mobile - Ajuste proporcional */
+@media (max-width: 768px) {
+    #formulario .btn {
+        padding: 0.9em 1.6em !important;
+    }
+}
+
+/* RODAPE */
+footer {
+    background: #000;
+    padding: 20px 0px 20px 0px;
+    position: relative;
+    text-align: center;
+}
+
+footer .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .navbar-nav a {
+    color: var(--cor-branco);
+    font-size: 0.8em;
+    text-align: center;
+}
+
+footer .navbar-nav a:hover {
+    text-decoration: none;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin: 0px 3px;
+    display: inline-block;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    #perfil {
+        width: 350px;
+    }
+    
+    .slider .list .item .content {
+        max-width: 90%;
+        padding-right: 20%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #perfil {
+        width: 300px;
+    }
+    
+    .slider .list .item .content {
+        padding-right: 10%;
+    }
+    
+    .slider .list .item .content .title,
+    .slider .list .item .content .type {
+        font-size: 4em;
+    }
+    
+    .thumbnail .item {
+        width: 120px;
+        height: 180px;
+    }
+    
+    footer .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    footer .navbar-nav a {
+        padding: 0.5rem 1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #perfil {
+        width: 250px;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+    
+    .slider .list .item .content {
+        padding: 0 15px;
+    }
+    
+    .slider .list .item .content .title,
+    .slider .list .item .content .type {
+        font-size: 3em;
+    }
+    
+    .thumbnail {
+        display: none;
+    }
+    
+    .nextPrevArrows {
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+        top: auto;
+        right: auto;
+        margin: 0 0 0 10px;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        z-index: 101;
+    }
+    
+    /* Feedback and Qualidades Responsive */
+    .opniao {
+        max-width: 100%;
+        margin: 0 10px 20px;
+    }
+    
+    .flex-container {
+        padding: 0 10px;
+    }
+    
+    .qualidade {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    
+    .logos-parceiros {
+        gap: 20px;
+    }
+    
+    .logo-item {
+        flex-basis: 120px;
+    }
+    
+    footer {
+        padding: 15px 0;
+        text-align: center;
+    }
+    
+    footer .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    footer ul {
+        justify-content: center;
+        padding: 0;
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    footer ul li {
+        float: none;
+        display: inline-block;
+        margin: 0 5px;
+    }
+    
+    #feedback, #formulario {
+        padding: 0 15px;
+    }
+    
+    .feedback h2, .formulario h2 {
+        margin-left: 15px;
+    }
+    
+    .qualidade h2 {
+        margin-left: 15px;
+    }
+    
+    .qualidade p {
+        margin-left: 15px;
+    }
+    
+    .opniao {
+        margin-left: 15px;
+        width: calc(100% - 25px);
+    }
+    
+    #procedimento h2,
+    #qualidade h2,
+    #sobre h2,
+    #feedback h2,
+    #formulario h2 {
+        font-size: 2.2em;
+        margin: 40px 0 20px 20px;
+    }
+    
+    #procedimento p,
+    #qualidade p,
+    #sobre p,
+    #feedback p,
+    #formulario p {
+        margin: 0 20px 20px 20px;
+        font-size: 0.95em;
+    }
+    
+    #doutor, #crm {
+        margin-left: 15px;
+    }
+    
+    .biografia p {
+        margin-left: 15px;
+    }
+    
+    #procedimento h2 {
+        margin-bottom: 5px !important;
+    }
+    #procedimento .slider {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #perfil {
+        width: 200px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    .slider .list .item .content {
+        padding: 0 10px;
+    }
+    
+    .slider .list .item .content .title,
+    .slider .list .item .content .type {
+        font-size: 2.5em;
+    }
+    
+    .thumbnail {
+        display: none;
+    }
+    
+    .nextPrevArrows {
+        width: 200px;
+    }
+    
+    .nextPrevArrows button {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .endereco img {
+        width: 100%;
+    }
+    
+    .logos-parceiros {
+        gap: 15px;
+    }
+    
+    .logo-item {
+        flex-basis: 100px;
+    }
+    
+    footer {
+        padding: 10px 0;
+    }
+    
+    footer .navbar-nav {
+        gap: 8px;
+    }
+    
+    footer .navbar-nav a {
+        font-size: 0.9em;
+        padding: 0.3rem 0.5rem;
+    }
+    
+    footer ul {
+        gap: 8px;
+    }
+    
+    .opniao {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        width: calc(100% - 20px);
+    }
+    
+    #feedback, #formulario {
+        padding: 0 10px;
+    }
+    
+    .feedback h2, .formulario h2 {
+        margin-left: 10px;
+    }
+    
+    .qualidade h2 {
+        margin-left: 10px;
+    }
+    
+    .qualidade p {
+        margin-left: 10px;
+    }
+    
+    .opniao {
+        margin-left: 10px;
+        width: calc(100% - 20px);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #perfil {
+        width: 150px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .slider .list .item .content .title,
+    .slider .list .item .content .type {
+        font-size: 2em;
+    }
+    
+    .thumbnail {
+        display: none;
+    }
+    
+    .nextPrevArrows {
+        width: 150px;
+    }
+    
+    footer .navbar-nav a {
+        font-size: 0.8em;
+        padding: 0.2rem 0.4rem;
+    }
+    
+    footer ul {
+        gap: 5px;
+    }
+    
+    footer ul li {
+        margin: 0 3px;
+    }
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+    .slider {
+        height: 80vh;
+    }
+    
+    .slider .list .item img {
+        object-fit: contain;
+        background-color: #fff;
+    }
+    
+    .slider .list .item .content {
+        top: 20%;
+        right: 0;
+        transform: none;
+        padding: 0 20px;
+        max-width: 50%;
+        margin-right: 20px;
+        text-align: right;
+    }
+    
+    .slider .list .item .content .title,
+    .slider .list .item .content .type {
+        font-size: 2.5em;
+        text-align: right;
+    }
+    
+    .slider .list .item .content .description {
+        font-size: 0.9em;
+        text-align: right;
+    }
+    
+    #procedimento h2,
+    #qualidade h2,
+    #sobre h2,
+    #feedback h2,
+    #formulario h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+    
+    .thumbnail {
+        display: none;
+    }
+    
+    .nextPrevArrows {
+        top: 85%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .slider {
+        height: 70vh;
+    }
+    
+    .slider .list .item .content {
+        top: 25%;
+        right: 8px;
+        max-width: 50%;
+        margin-right: 25px;
+    }
+    
+    .slider .list .item .content .title,
+    .slider .list .item .content .type {
+        font-size: 2em;
+    }
+    
+    .slider .list .item .content .description {
+        font-size: 0.85em;
+    }
+    
+    #procedimento h2,
+    #qualidade h2,
+    #sobre h2,
+    #feedback h2,
+    #formulario h2 {
+        font-size: 1.5em;
+        margin-bottom: 0px;
+    }
+    
+    .thumbnail {
+        display: none;
+    }
+    
+    .nextPrevArrows {
+        top: 90%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .slider {
+        height: 60vh;
+    }
+    
+    .slider .list .item .content {
+        top: 30%;
+        right: 5px;
+        max-width: 70%;
+        margin-right: 25px;
+    }
+    
+    .slider .list .item .content .title,
+    .slider .list .item .content .type {
+        font-size: 1.5em;
+    }
+    
+    .slider .list .item .content .description {
+        font-size: 0.8em;
+    }
+    
+    #procedimento h2,
+    #qualidade h2,
+    #sobre h2,
+    #feedback h2,
+    #formulario h2 {
+        font-size: 1.2em;
+        margin-bottom: 8px;
+    }
+    
+    .thumbnail {
+        display: none;
+    }
+    
+    .nextPrevArrows {
+        top: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    #qualidade .flex-container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 20px;
+        margin: 0;
+    }
+    
+    #qualidade .col-sm-4 {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+        text-align: left;
+        padding-left: 0;
+    }
+    
+    #qualidade .col-sm-4 h5 {
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+    
+    #qualidade .col-sm-4 p {
+        text-align: left;
+        margin-left: 0;
+    }
+}
+
+/* Ajustes responsivos para todos os dispositivos */
+/* Tablets grandes (1024px - 1200px) */
+@media (max-width: 1200px) {
+    #procedimento h2,
+    #qualidade h2,
+    #sobre h2,
+    #feedback h2,
+    #formulario h2 {
+        font-size: 2.3em;
+        margin: 45px 0 22px 20px;
+    }
+    
+    .slider {
+        height: 85vh;
+    }
+    
+    .slider .list .item .content {
+        max-width: 90%;
+        padding-right: 20%;
+    }
+}
+
+/* Tablets médios (768px - 1024px) */
+@media (max-width: 1024px) {
+    .slider .thumbnail {
+        display: none !important;
+    }
+    .slider {
+        display: block !important;
+        height: 50vw;
+        min-height: 220px;
+        max-height: 400px;
+    }
+    .slider .list .item {
+        display: block !important;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+    }
+    .slider .list .item img {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+        background: #fff;
+    }
+}
+
+/* Tablets pequenos (600px - 768px) */
+@media (max-width: 768px) {
+    .slider {
+        height: 45vw;
+        min-height: 150px;
+        max-height: 250px;
+    }
+    .slider .list .item img {
+        max-height: 80%;
+    }
+}
+
+/* Celulares grandes (480px - 600px) */
+@media (max-width: 600px) {
+    #procedimento h2,
+    #qualidade h2,
+    #sobre h2,
+    #feedback h2,
+    #formulario h2 {
+        font-size: 1.7em;
+        margin: 30px 0 15px 20px;
+    }
+    
+    .slider {
+        height: 70vh;
+    }
+    
+    .slider .list .item .content {
+        padding-right: 5%;
+    }
+    
+    .nextPrevArrows {
+        top: 85%;
+    }
+    
+    .opniao {
+        margin: 0 10px 20px;
+    }
+}
+
+/* Celulares médios (375px - 480px) */
+@media (max-width: 480px) {
+    #procedimento h2,
+    #qualidade h2,
+    #sobre h2,
+    #feedback h2,
+    #formulario h2 {
+        font-size: 1.5em;
+        margin: 25px 0 12px 20px;
+    }
+    
+    .slider {
+        height: 65vh;
+    }
+    
+    .slider .list .item .content {
+        padding: 0 12px;
+    }
+    
+    .slider .list .item .content .title,
+    .slider .list .item .content .description {
+        width: 75%;
+        margin-left: auto;
+        margin-right: 0;
+        text-align: left;
+        box-sizing: border-box;
+    }
+    
+    .nextPrevArrows {
+        top: 90%;
+    }
+    
+    .opniao {
+        margin: 0 5px 15px;
+    }
+    
+    .slider .list .item .content {
+        margin-top: -60px !important;
+    }
+}
+
+/* Celulares pequenos (320px - 375px) */
+@media (max-width: 375px) {
+    #procedimento h2,
+    #qualidade h2,
+    #sobre h2,
+    #feedback h2,
+    #formulario h2 {
+        font-size: 1.3em;
+        margin: 20px 0 10px 15px;
+    }
+    
+    .slider {
+        height: 60vh;
+    }
+    
+    .slider .list .item .content {
+        padding: 0 10px;
+    }
+    
+    .nextPrevArrows {
+        top: 95%;
+    }
+    
+    .opniao {
+        margin: 0 5px 10px;
+        padding: 10px;
+    }
+}
+
+/* Ajustes específicos para orientação paisagem */
+@media (max-height: 500px) and (orientation: landscape) {
+    .slider {
+        height: 100vh;
+    }
+    
+    .slider .list .item .content {
+        top: 15%;
+    }
+    
+    .nextPrevArrows {
+        top: 50%;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 320px) {
+    #procedimento h2,
+    #qualidade h2,
+    #sobre h2,
+    #feedback h2,
+    #formulario h2 {
+        font-size: 1.2em;
+        margin: 15px 0 8px 10px;
+    }
+    
+    .slider {
+        height: 55vh;
+    }
+    
+    .slider .list .item .content {
+        padding: 0 5px;
+    }
+    
+    .nextPrevArrows {
+        top: 95%;
+        width: 100px;
+    }
+    
+    .nextPrevArrows button {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .opniao {
+        margin: 0 5px 8px;
+        padding: 8px;
+    }
+}
+
+/* Ajustes gerais para o conteúdo */
+.slider .list .item .content {
+    top: 5% !important; /* Reduz o espaçamento superior */
+    padding-right: 10px !important;
+}
+
+/* Ajustes específicos para a descrição */
+.slider .list .item .content .description {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    font-size: 14px !important;
+    padding-right: 10px !important;
+    overflow: hidden !important;
+    text-align: left !important; /* Alinhamento melhor para mobile */
+}
+
+/* Ajuste do título */
+.slider .list .item .content .title {
+    font-size: 1.8em !important;
+    line-height: 1.2 !important;
+    margin-bottom: 10px !important;
+}
+
+@media (max-width: 768px) {
+    .slider .list .item .content {
+        top: 15% !important;
+        right: 0 !important;
+        width: 90% !important;
+        padding: 0 15px !important;
+    }
+
+    .slider .list .item .content .title {
+        font-size: 1.5em !important;
+    }
+
+    .slider .list .item .content .description {
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+        padding-right: 5px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider .list .item .content {
+        top: 10% !important;
+        padding: 0 10px !important;
+    }
+
+    .slider .list .item .content .title {
+        font-size: 1.2em !important;
+    }
+
+    .slider .list .item .content .description {
+        font-size: 11px !important;
+    }
+}
+
+/* Alinhamento geral do conteúdo */
+.slider .list .item .content {
+    text-align: right !important;
+    right: 0;
+    padding-right: 0;
+    margin-right: 20px;
+}
+
+/* Ajuste específico para mobile */
+@media (max-width: 768px) {
+    .slider .list .item .content {
+        width: 80% !important;
+        margin-left: auto !important;
+        padding-left: 0 !important;
+    }
+    
+    .slider .list .item .content .description {
+        margin-left: auto !important;
+        width: 90% !important;
+        text-align: right !important;
+    }
+}
+
+/* Ajuste para textos longos */
+.slider .list .item .content .description {
+    margin-left: auto;
+    padding-left: 20%;
+}
+
+/* Alinhamento geral para todas as telas */
+.slider .list .item .content {
+    text-align: right !important;
+    right: 0 !important;
+    left: auto !important;
+    padding-right: 5% !important;
+}
+
+.slider .list .item .content .title,
+.slider .list .item .content .type,
+.slider .list .item .content .description {
+    text-align: right !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+/* Ajuste de largura para manter proporção */
+.slider .list .item .content .description {
+    width: 70% !important;
+    margin-left: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Media Queries para manter alinhamento em todas as resoluções */
+@media (max-width: 1200px) {
+    .slider .list .item .content .description {
+        width: 80% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .slider .list .item .content .description {
+        width: 85% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider .list .item .content {
+        padding-right: 8% !important;
+    }
+    
+    .slider .list .item .content .description {
+        width: 90% !important;
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider .list .item .content {
+        padding-right: 10% !important;
+    }
+    
+    .slider .list .item .content .description {
+        width: 100% !important;
+    }
+}
+
+/* Aumento APENAS para computador (telas grandes) */
+@media (min-width: 992px) {
+    .slider .list .item .content .title {
+        font-size: 5.5em !important; /* Aumento apenas em desktop */
+    }
+    
+    .slider .list .item .content .description {
+        font-size: 18px !important; /* Aumento apenas em desktop */
+    }
+}
+
+/* Tablet (768px - 992px) - Mantém tamanho original */
+@media (max-width: 991px) and (min-width: 768px) {
+    .slider .list .item .content .title {
+        font-size: 4em !important; /* Tamanho tablet original */
+    }
+    
+    .slider .list .item .content .description {
+        font-size: 15px !important; /* Tamanho tablet original */
+    }
+}
+
+/* Mobile (até 767px) - Mantém config existente */
+/* (Não precisa alterar, já está no seu CSS original) */
+
+/* Correção específica para títulos em mobile */
+@media (max-width: 767px) {
+    .slider .list .item .content .title {
+        font-size: 1.8rem !important;
+        line-height: 1.3;
+        margin: 0 15px 10px 0;
+        position: relative;
+        text-shadow: 0 2px 3px rgba(0,0,0,0.3);
+        transform: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+    }
+
+    .slider .list .item .content {
+        top: 12% !important;
+        padding-right: 5% !important;
+    }
+
+    .slider .list .item img {
+        object-position: 70% center;
+    }
+}
+
+@media (max-width: 767px) {
+    .slider .list .item .content {
+        top: 25% !important; /* Aumentei de 12% para 25% */
+        transform: translateY(0) !important;
+        padding-right: 8% !important;
+    }
+
+    .slider .list .item .content .title {
+        margin-bottom: 15px !important; /* Espaço extra entre título e descrição */
+    }
+
+    .slider .list .item img {
+        object-position: 80% center; /* Ajuste de foco da imagem */
+    }
+}
+
+/* Ajuste final - Espaçamento mínimo entre itens */
+@media (max-width: 768px) {
+    #qualidade .flex-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 5px !important; /* Espaço vertical reduzido */
+        margin: -5px 0 !important; /* Compensa espaçamento residual */
+    }
+
+    #qualidade .col-sm-4 {
+        margin: 0 !important;
+        padding: 10px 0 !important; /* Remove padding lateral */
+        transform: scale(0.98); /* Opcional: efeito visual compacto */
+    }
+
+    #qualidade h5,
+    #qualidade p {
+        margin: 0 !important;
+        padding: 5px 15px !important; /* Controle preciso interno */
+    }
+
+    #qualidade h5 img {
+        margin-right: 5px !important;
+    }
+}
+
+/* REMOVA A REGRA ATUAL DA UNICAMP */
+.logos-parceiros .logo-item:first-child .logo-instituicao {
+    /* Remova o max-width: 65px */
+}
+
+/* NOVOS AJUSTES */
+.logos-parceiros .logo-item {
+    flex: 0 1 160px; /* Tamanho base igual para todos */
+    padding: 15px;
+}
+
+.logo-instituicao {
+    max-width: 100% !important; /* Força proporção igual */
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    object-fit: contain; /* Mantém proporção */
+}
+
+/* Ajuste específico para UNICAMP */
+.logos-parceiros .logo-item:first-child .logo-instituicao {
+    padding: 10px; /* Compensação visual */
+    max-height: 80px; /* Altura máxima controlada */
+}
+
+@media (max-width: 768px) {
+    .logos-parceiros {
+        gap: 20px;
+    }
+    
+    .logos-parceiros .logo-item {
+        flex-basis: 120px; /* Redução proporcional */
+        padding: 10px;
+    }
+
+    /* Ajuste fino para UNICAMP em mobile */
+    .logos-parceiros .logo-item:first-child .logo-instituicao {
+        max-height: 60px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logos-parceiros .logo-item {
+        flex-basis: 100px;
+    }
+    
+    .logos-parceiros .logo-item:first-child .logo-instituicao {
+        max-height: 50px;
+    }
+}
+
+  /* Tamanhos base (desktop) */
+h1 { font-size: 40px; }
+h2 { font-size: 32px; }
+h5 { font-size: 20px; }
+p, .description { font-size: 13px; }
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 26px; }
+  h5 { font-size: 18px; }
+  p, .description { font-size: 12px; }
+}
+
+/* Celular (576px) */
+@media (max-width: 576px) {
+  h1 { font-size: 28px; }
+  h2 { font-size: 22px; }
+  h5 { font-size: 16px; }
+  p, .description { font-size: 11px; }
+}
+
+/* Celular pequeno (400px) */
+@media (max-width: 400px) {
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  p, .description { font-size: 10px; }
+}
+
+/* Descrição do slider em telas pequenas */
+@media (max-width: 576px) {
+    .slider .list .item .content .description {
+      font-size: 12px !important;
+      line-height: 1.3;
+    }
+  }
+  
+  /* Cards de feedback */
+  @media (max-width: 576px) {
+    .opniao p {
+      font-size: 11px !important;
+      line-height: 1.2;
+    }
+  }
+
+/* Ajustes para o texto da biografia */
+#sobre .biografia p {
+    /* Estilo base (desktop) */
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+@media (max-width: 992px) { /* Tablets grandes */
+    #sobre .biografia p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 768px) { /* Tablets */
+    #sobre .biografia p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0 15px 1rem !important; /* Ajuste de margens */
+    }
+}
+
+@media (max-width: 576px) { /* Celulares */
+    #sobre .biografia p {
+        font-size: 13px;
+        line-height: 1.4;
+        margin: 0 10px 0.8rem !important;
+    }
+}
+
+@media (max-width: 400px) { /* Celulares pequenos */
+    #sobre .biografia p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+}
+
+#sobre .biografia {
+    padding: 15px !important; /* Reduz padding interno */
+}
+
+/* Ajustes para o formulário */
+#formulario p {
+    /* Estilo base (desktop) */
+    font-size: 18px;
+}
+
+#formulario .btn {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    #formulario h2 {
+        font-size: 20px !important; /* Título um pouco maior que o texto */
+    }
+    
+    #formulario p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+    }
+    
+    #formulario .btn {
+        font-size: 14px !important;
+        padding: 8px 20px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    #formulario h2 {
+        font-size: 18px !important;
+    }
+    
+    #formulario p {
+        font-size: 13px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    #formulario .btn {
+        font-size: 13px !important;
+        padding: 6px 16px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    #formulario p {
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+    }
+    
+    #formulario .btn {
+        font-size: 12px !important;
+    }
+}
+
+/* ANIMAÇÕES REVISADAS */
+@keyframes showContent {
+    from {
+        transform: translateY(50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideContent {
+    to {
+        transform: translateY(-50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+/* NOVAS REGRAS PARA AS ANIMAÇÕES */
+.slider .list .item .content > * {
+    animation: hideContent 0.5s forwards;
+}
+
+.slider .list .item.active .content > * {
+    animation: showContent 0.5s 0.3s forwards;
+}
+
+.slider .list .item {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.slider .list .item.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slider .list .item {
+    pointer-events: none;
+}
+
+.slider .list .item.active {
+    pointer-events: auto;
+}
+
+.slider .list .item .content > * {
+    position: relative;
+    transition: none;
+    overflow: hidden;
+}
+
+/* IMAGEM RESPONSIVA DINÂMICA */
+#perfil {
+    /* Tamanho base */
+    width: 305px;
+    height: auto;
+    
+    /* Regras de responsividade */
+    max-width: 100%; /* Nunca ultrapassa o container */
+    object-fit: contain; /* Mantém proporções */
+    
+    /* Posicionamento absoluto */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    
+    /* Transição suave para redimensionamento */
+    transition: width 0.3s ease;
+}
+
+/* CONTROLE POR BREAKPOINTS */
+@media (max-width: 1200px) {
+    #perfil {
+        width: 300px; /* Redução progressiva */
+    }
+}
+
+@media (max-width: 992px) {
+    #perfil {
+        width: 260px;
+        right: -20px; /* Ajuste de posição */
+    }
+}
+
+@media (max-width: 768px) {
+    #perfil {
+        width: 220px;
+        right: 50%;
+        transform: translateX(50%); /* Centraliza */
+    }
+}
+
+@media (max-width: 576px) {
+    #perfil {
+        width: 180px;
+        bottom: 20px; /* Ajuste vertical */
+    }
+}
+
+@media (max-width: 400px) {
+    #perfil {
+        width: 150px;
+        min-width: 120px; /* Limite mínimo */
+    }
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajuste conforme necessidade */
+    margin: 0 auto;
+    overflow: visible;
+}
+
+/* home section */
+#home {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Nova altura */
+    min-height: 550px; /* Altura mínima para evitar compressão */
+    display: flex; /* Novo */
+    align-items: center; /* Centraliza verticalmente */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/clinica.png);
+    background-size: cover;
+    background-position: center;
+    padding: 15px 0;
+}
+
+/* Ajuste para conteúdo */
+#home .container {
+    height: 100%;
+}
+
+#home .row {
+    height: 100%;
+}
+
+/* Ajuste da imagem */
+#perfil {
+    width: 35vw;
+    max-width: 325px;
+    min-width: 155px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    z-index: 2;
+}
+
+.procedimento-luxo {
+  background-color: var(--cor-branco);
+}
+
+.procedimento-luxo .section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #534937;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.procedimento-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.procedimento-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.procedimento-item .imagem {
+text-align: center;
+  flex: 1;
+  padding: 10px;
+}
+
+.procedimento-item .imagem img {
+  width: 48%;
+  border-radius: 8px;
+}
+
+.procedimento-item .descricao {
+  flex: 1;
+  max-width: 48%;
+  padding: 10px;
+  text-align: center;
+}
+
+.procedimento-item .descricao h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: #93805e;
+  margin-bottom: 15px;
+}
+
+.procedimento-item .descricao p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .procedimento-item {
+    flex-direction: column;
+  }
+  .procedimento-item.reverse {
+    flex-direction: column;
+  }
+  .procedimento-item .imagem,
+  .procedimento-item .descricao {
+    max-width: 100%;
+  }
+  .procedimento-luxo .section-title {
+    font-size: 2rem;
+  }
+}
