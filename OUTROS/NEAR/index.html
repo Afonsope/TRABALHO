@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArcTech — Climatização que transforma ambientes</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="./assents/styles/style.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5500000000000" class="whatsapp-float" target="_blank" title="Fale no WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+</a>
+
+<!-- NAV -->
+<nav>
+  <div class="logo"><img src="./assents/imgs/logos/logo_horizontal.png" alt=""></div>
+  <ul>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#por-que-nos">Por que nós</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#contato" class="nav-cta">Orçamento grátis</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="particles" id="particles"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Atendimento em até 2 horas
+    </div>
+
+    <h1>
+      CLIMA<em>TIZAÇÃO</em><br>
+      QUE <span class="blue">TRANSFORMA</span><br>
+      AMBIENTES
+    </h1>
+
+    <p class="hero-sub">
+      Instalação, manutenção e limpeza de ar condicionado com agilidade, garantia e profissionais certificados. Residencial, comercial e industrial.
+    </p>
+
+    <div class="hero-actions">
+      <a href="https://wa.me/5500000000000" class="btn-primary" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> Pedir orçamento grátis
+      </a>
+      <a href="#servicos" class="btn-secondary">
+        Ver serviços <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="ac-unit">
+      <div class="wind-lines">
+        <div class="wind"></div>
+        <div class="wind"></div>
+        <div class="wind"></div>
+        <div class="wind"></div>
+      </div>
+      <div class="ac-body">
+        <div class="ac-led"></div>
+        <div class="ac-vents">
+          <div class="ac-vent"></div>
+          <div class="ac-vent"></div>
+          <div class="ac-vent"></div>
+          <div class="ac-vent"></div>
+        </div>
+        <div class="ac-display">
+          <div class="ac-temp">18<span>°C</span></div>
+          <div class="ac-mode"><i class="fa-solid fa-snowflake"></i> COOL MODE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item reveal">
+    <div class="stat-num" data-count="2500">0</div>
+    <div class="stat-label">Clientes atendidos</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-1">
+    <div class="stat-num" data-count="12">0</div>
+    <div class="stat-label">Anos de experiência</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-2">
+    <div class="stat-num" data-count="98">0</div>
+    <div class="stat-label">% de satisfação</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-3">
+    <div class="stat-num" data-count="24">0</div>
+    <div class="stat-label">Horas de suporte</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="servicos">
+  <div class="section-label">O que fazemos</div>
+  <h2 class="section-title">Soluções completas em<br>ar condicionado</h2>
+  <p class="section-sub">Do residencial ao industrial, oferecemos tudo que você precisa para manter seu ambiente fresco, limpo e eficiente.</p>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-icon"><i class="fa-solid fa-wrench"></i></span>
+      <div class="service-title">Instalação</div>
+      <p class="service-desc">Instalação técnica de aparelhos Split, Multi-Split, VRF e janela. Equipe certificada e materiais de primeira qualidade.</p>
+      <span class="service-tag">Residencial & Comercial</span>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <span class="service-icon"><i class="fa-solid fa-spray-can-sparkles"></i></span>
+      <div class="service-title">Limpeza e Higienização</div>
+      <p class="service-desc">Limpeza profunda com produtos bactericidas. Elimina fungos, bactérias e mau cheiro. Ar mais saudável para sua família.</p>
+      <span class="service-tag">Saúde garantida</span>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <span class="service-icon"><i class="fa-solid fa-gear"></i></span>
+      <div class="service-title">Manutenção Preventiva</div>
+      <p class="service-desc">Contratos mensais e anuais com visitas programadas para garantir a longevidade do seu equipamento.</p>
+      <span class="service-tag">Planos a partir de R$89/mês</span>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+      <div class="service-title">Assistência Técnica</div>
+      <p class="service-desc">Diagnóstico rápido e conserto de qualquer defeito: carga de gás, placa eletrônica, compressor e muito mais.</p>
+      <span class="service-tag">Atendimento urgente</span>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <span class="service-icon"><i class="fa-solid fa-building"></i></span>
+      <div class="service-title">Projetos Industriais</div>
+      <p class="service-desc">Projetos de climatização para galpões, hospitais, supermercados e condomínios. Dimensionamento e execução completos.</p>
+      <span class="service-tag">Grande porte</span>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <span class="service-icon"><i class="fa-solid fa-box-open"></i></span>
+      <div class="service-title">Venda de Equipamentos</div>
+      <p class="service-desc">Comercializamos as principais marcas do mercado: LG, Samsung, Midea, Daikin. Com e sem instalação inclusa.</p>
+      <span class="service-tag">Melhores preços</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="por-que-nos">
+  <div class="why-grid">
+    <div>
+      <div class="section-label">Por que nos escolher</div>
+      <h2 class="section-title">Experiência que<br>você pode sentir</h2>
+      <p class="section-sub">Não somos apenas instaladores. Somos especialistas em conforto térmico com mais de uma década de atuação no mercado.</p>
+
+      <div class="why-features">
+        <div class="why-item reveal">
+          <div class="why-icon-wrap"><i class="fa-solid fa-bolt"></i></div>
+          <div class="why-text">
+            <h4>Atendimento em até 2 horas</h4>
+            <p>Sabemos que calor não espera. Nossa equipe está sempre pronta para chegar rapidamente ao seu endereço.</p>
+          </div>
+        </div>
+        <div class="why-item reveal reveal-delay-1">
+          <div class="why-icon-wrap"><i class="fa-solid fa-medal"></i></div>
+          <div class="why-text">
+            <h4>Técnicos certificados INMETRO</h4>
+            <p>Todos os nossos profissionais possuem certificação técnica e são treinados continuamente nas melhores práticas.</p>
+          </div>
+        </div>
+        <div class="why-item reveal reveal-delay-2">
+          <div class="why-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="why-text">
+            <h4>Garantia em todos os serviços</h4>
+            <p>Oferecemos garantia escrita em peças e mão de obra. Se não ficar bom, voltamos sem custo adicional.</p>
+          </div>
+        </div>
+        <div class="why-item reveal reveal-delay-3">
+          <div class="why-icon-wrap"><i class="fa-solid fa-credit-card"></i></div>
+          <div class="why-text">
+            <h4>Pagamento facilitado</h4>
+            <p>Parcelamos em até 12x no cartão. Também aceitamos PIX, boleto e dinheiro. Sem burocracia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="why-visual reveal">
+      <div class="big-num">12</div>
+      <div class="big-num-label">anos de mercado</div>
+      <div class="years-badge"><i class="fa-solid fa-temperature-half"></i> +2.500 clientes satisfeitos</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="depoimentos">
+  <div class="section-label">Depoimentos</div>
+  <h2 class="section-title">O que nossos clientes dizem</h2>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="quote-mark">"</div>
+      <div class="stars">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+      </div>
+      <p class="testimonial-text">Chamei a ArcTech às 14h com o calor infernal e às 16h o técnico já estava aqui. Consertou o gás em 40 minutos. Serviço impecável e preço justo.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">MF</div>
+        <div>
+          <div class="author-name">Marcos Fernandes</div>
+          <div class="author-role">Empresário — São Paulo, SP</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-1">
+      <div class="quote-mark">"</div>
+      <div class="stars">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+      </div>
+      <p class="testimonial-text">Contratei o plano de manutenção anual e foi a melhor decisão. Os aparelhos estão muito mais silenciosos e o consumo de energia caiu. Recomendo muito!</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">PC</div>
+        <div>
+          <div class="author-name">Patricia Costa</div>
+          <div class="author-role">Gerente Comercial — Campinas, SP</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <div class="quote-mark">"</div>
+      <div class="stars">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+      </div>
+      <p class="testimonial-text">Instalaram 8 aparelhos no nosso escritório. Trabalho impecável, limpíssimo e terminaram antes do prazo. A equipe é muito profissional. Com certeza voltarei.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">RL</div>
+        <div>
+          <div class="author-name">Roberto Lima</div>
+          <div class="author-role">Diretor — Empresa de TI</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contato">
+  <div class="cta-block reveal">
+    <h2>PRONTO PARA RESPIRAR<br>UM AR MAIS FRESCO?</h2>
+    <p>Fale agora com nossa equipe e receba um orçamento gratuito e sem compromisso. Atendemos toda a região.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/5500000000000" class="btn-white" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp agora
+      </a>
+      <a href="tel:+5500000000000" class="btn-outline-white">
+        <i class="fa-solid fa-phone"></i> Ligar agora
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">Arc<span>Tech</span></div>
+      <p>Especialistas em climatização residencial, comercial e industrial. Mais de 12 anos transformando ambientes com qualidade e conforto.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Serviços</h5>
+      <ul>
+        <li><a href="#">Instalação</a></li>
+        <li><a href="#">Manutenção</a></li>
+        <li><a href="#">Limpeza</a></li>
+        <li><a href="#">Assistência Técnica</a></li>
+        <li><a href="#">Projetos</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Empresa</h5>
+      <ul>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="#">Equipe</a></li>
+        <li><a href="#">Certificações</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contato</h5>
+      <ul>
+        <li><a href="https://wa.me/5500000000000">WhatsApp</a></li>
+        <li><a href="tel:+5500000000000">(00) 00000-0000</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#01626e6f7560756e41607362756462692f626e6c2f6373"><span class="__cf_email__" data-cfemail="bcdfd3d2c8ddc8d3fcddcedfc8d9dfd492dfd3d192dece">[email&#160;protected]</span></a></li>
+        <li><a href="#">Seg–Sab 7h–19h</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 ArcTech Climatização. Todos os direitos reservados.</p>
+    <p>Feito com <i class="fa-solid fa-heart" style="color: var(--red);"></i> para o seu conforto</p>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX; mouseY = e.clientY;
+    cursor.style.transform = `translate(${mouseX - 6}px, ${mouseY - 6}px)`;
+  });
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    ring.style.transform = `translate(${ringX - 18}px, ${ringY - 18}px)`;
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => { ring.style.width = '54px'; ring.style.height = '54px'; });
+    el.addEventListener('mouseleave', () => { ring.style.width = '36px'; ring.style.height = '36px'; });
+  });
+
+  // Floating particles
+  const particlesContainer = document.getElementById('particles');
+  for (let i = 0; i < 18; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = Math.random() * 3 + 1;
+    const isBlue = Math.random() > 0.5;
+    p.style.cssText = `
+      width: ${size}px; height: ${size}px;
+      left: ${Math.random() * 100}%;
+      background: ${isBlue ? 'rgba(74,158,255,0.6)' : 'rgba(227,27,35,0.4)'};
+      animation-duration: ${Math.random() * 12 + 8}s;
+      animation-delay: ${Math.random() * 8}s;
+    `;
+    particlesContainer.appendChild(p);
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Counter animation
+  function animateCount(el, target) {
+    let current = 0;
+    const step = target / 60;
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) { current = target; clearInterval(timer); }
+      el.textContent = Math.floor(current).toLocaleString('pt-BR');
+    }, 25);
+  }
+  const statNums = document.querySelectorAll('.stat-num[data-count]');
+  const statsObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        animateCount(el, parseInt(el.dataset.count));
+        statsObs.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  statNums.forEach(el => statsObs.observe(el));
+</script>
+</body>
+</html>

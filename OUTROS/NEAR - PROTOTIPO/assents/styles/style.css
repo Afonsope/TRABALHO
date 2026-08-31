@@ -1,0 +1,14 @@
+/* style.css — Near Climatização */
+/* Todos os estilos principais estão inline no index.html para máxima portabilidade */
+/* Este arquivo pode ser usado para sobrescritas ou extensões futuras */
+
+:root {
+  --blue: #3F83BF;
+  --red: #D32238;
+  --dark: #0D0F14;
+  --dark-2: #181B22;
+  --dark-3: #222630;
+  --light: #F4F6F9;
+  --muted: #8A8F9E;
+  --white: #ffffff;
+}

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArcTech Academy — Curso Profissional de Climatização</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5500000000000" class="whatsapp-float" target="_blank" title="Suporte via WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo"><img src="./assets/imgs/logos/logo_horizontal.png" alt=""><span class="academy-tag">Academy</span></a>
+  <ul>
+    <li><a href="#dicas">Dicas</a></li>
+    <li><a href="#curriculum">Conteúdo</a></li>
+    <li><a href="#instrutor">Instrutor</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#comprar" class="nav-cta">Comprar curso</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="particles" id="particles"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Mais de 1.200 alunos formados
+    </div>
+
+    <h1>
+      TORNE-SE UM<br>
+      TÉCNICO <em>EXPERT</em><br>
+      EM <span class="blue">CLIMATIZAÇÃO</span>
+    </h1>
+
+    <p class="hero-sub">
+      Do básico ao avançado: instalação, manutenção, diagnóstico de falhas e projetos industriais. Aprenda com quem tem mais de 12 anos de mercado e conquiste sua independência financeira.
+    </p>
+
+    <div class="hero-proof">
+      <div class="proof-avatars">
+        <span>JP</span><span>MC</span><span>RL</span>
+      </div>
+      <div class="proof-text">
+        <strong>+1.200 profissionais</strong> já transformaram sua carreira com o curso
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#comprar" class="btn-primary">
+        <i class="fa-solid fa-bolt"></i> Quero me inscrever
+      </a>
+      <a href="#curriculum" class="btn-secondary">
+        Ver conteúdo <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-visual-side">
+    <div class="course-card-preview">
+      <div class="card-thumb">
+        <div class="card-badge-top">Novo</div>
+        <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Curso Completo de Climatização</div>
+        <div class="card-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <span>4.9 (438 avaliações)</span>
+        </div>
+        <div class="card-meta">
+          <div class="card-meta-item"><i class="fa-solid fa-video"></i> 87 aulas</div>
+          <div class="card-meta-item"><i class="fa-solid fa-clock"></i> 40h de conteúdo</div>
+          <div class="card-meta-item"><i class="fa-solid fa-infinity"></i> Acesso vitalício</div>
+        </div>
+        <div class="card-price-area">
+          <div>
+            <div class="price-old">R$ 897,00</div>
+            <div class="price-new">R$497 <small>ou 12x R$46,80</small></div>
+          </div>
+          <button class="card-cta" onclick="document.getElementById('comprar').scrollIntoView({behavior:'smooth'})">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item reveal">
+    <div class="stat-num" data-count="1200">0</div>
+    <div class="stat-label">Alunos formados</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-1">
+    <div class="stat-num" data-count="87">0</div>
+    <div class="stat-label">Aulas em vídeo</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-2">
+    <div class="stat-num" data-count="40">0</div>
+    <div class="stat-label">Horas de conteúdo</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-3">
+    <div class="stat-num" data-count="7">0</div>
+    <div class="stat-label">Dias de garantia</div>
+  </div>
+</div>
+
+<!-- DICAS / BLOG -->
+<section id="dicas">
+  <div class="section-label">Conteúdo gratuito</div>
+  <h2 class="section-title">Dicas que todo<br>técnico precisa saber</h2>
+  <p class="section-sub">Antes mesmo de se inscrever, confira conteúdo valioso que publicamos para quem quer crescer na área de climatização.</p>
+
+  <div class="tips-grid">
+    <div class="tip-card reveal">
+      <div class="tip-icon"><i class="fa-solid fa-snowflake"></i></div>
+      <div class="tip-tag">Manutenção</div>
+      <div class="tip-title">Como identificar falta de gás no ar condicionado em 3 passos</div>
+      <p class="tip-excerpt">Aprenda os sinais clássicos de baixa carga de gás, como usar o manômetro corretamente e evitar os erros que todo iniciante comete na hora do diagnóstico.</p>
+      <a href="#" class="tip-read-more">Ler dica completa <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="tip-card reveal reveal-delay-1">
+      <div class="tip-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+      <div class="tip-tag">Elétrica</div>
+      <div class="tip-title">Erros elétricos que podem queimar a placa do seu ar condicionado</div>
+      <p class="tip-excerpt">Tensão errada, aterramento inadequado e fusíveis subfusionados são as principais causas de placa queimada. Saiba como prevenir e proteger o equipamento do cliente.</p>
+      <a href="#" class="tip-read-more">Ler dica completa <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="tip-card reveal reveal-delay-2">
+      <div class="tip-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+      <div class="tip-tag">Higienização</div>
+      <div class="tip-title">O passo a passo da limpeza profissional que faz clientes te indicarem</div>
+      <p class="tip-excerpt">Descubra os produtos certos, a ordem das etapas e como apresentar o resultado ao cliente de forma que gere recorrência e indicações automáticas.</p>
+      <a href="#" class="tip-read-more">Ler dica completa <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="tip-card reveal">
+      <div class="tip-icon"><i class="fa-solid fa-calculator"></i></div>
+      <div class="tip-tag">Dimensionamento</div>
+      <div class="tip-title">Como calcular BTUs sem errar: a fórmula definitiva para técnicos</div>
+      <p class="tip-excerpt">Evite superdimensionar ou subdimensionar o equipamento. Confira a tabela de BTUs por m² e os fatores de correção para diferentes ambientes e regiões.</p>
+      <a href="#" class="tip-read-more">Ler dica completa <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="tip-card reveal reveal-delay-1">
+      <div class="tip-icon"><i class="fa-solid fa-wrench"></i></div>
+      <div class="tip-tag">Instalação</div>
+      <div class="tip-title">Kit de ferramentas essencial para começar a instalar com qualidade</div>
+      <p class="tip-excerpt">Do fluxômetro ao dobrador de tubos: veja quais ferramentas são indispensáveis, quais podem esperar e onde comprar sem gastar uma fortuna no início da carreira.</p>
+      <a href="#" class="tip-read-more">Ler dica completa <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="tip-card reveal reveal-delay-2">
+      <div class="tip-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+      <div class="tip-tag">Negócio</div>
+      <div class="tip-title">Como precificar seus serviços e parar de cobrar barato</div>
+      <p class="tip-excerpt">Planilha de precificação, cálculo de custo hora e como apresentar orçamentos que o cliente aceita sem questionar. O lado financeiro da sua carreira técnica.</p>
+      <a href="#" class="tip-read-more">Ler dica completa <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE STRIP -->
+<div class="guarantee-strip">
+  <div class="guarantee-item reveal">
+    <i class="fa-solid fa-shield-halved"></i>
+    <div><strong>7 dias de garantia</strong>Devolução total sem perguntas</div>
+  </div>
+  <div class="guarantee-item reveal reveal-delay-1">
+    <i class="fa-solid fa-infinity"></i>
+    <div><strong>Acesso vitalício</strong>Assista quando e quantas vezes quiser</div>
+  </div>
+  <div class="guarantee-item reveal reveal-delay-2">
+    <i class="fa-solid fa-certificate"></i>
+    <div><strong>Certificado incluso</strong>Reconhecido no mercado</div>
+  </div>
+  <div class="guarantee-item reveal reveal-delay-3">
+    <i class="fa-brands fa-whatsapp"></i>
+    <div><strong>Suporte via WhatsApp</strong>Tire dúvidas com o instrutor</div>
+  </div>
+</div>
+
+<!-- CURRICULUM -->
+<section id="curriculum">
+  <div class="section-label">Grade curricular</div>
+  <h2 class="section-title">O que você vai<br>aprender no curso</h2>
+  <p class="section-sub">87 aulas divididas em 9 módulos progressivos. Do zero absoluto à autonomia completa como técnico profissional.</p>
+
+  <div class="curriculum-grid">
+    <div class="module-list">
+
+      <div class="module-item open reveal">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-num">01</div>
+          <div class="module-name">Fundamentos da Refrigeração</div>
+          <span class="module-lessons">8 aulas</span>
+          <i class="fa-solid fa-chevron-down module-toggle"></i>
+        </div>
+        <div class="module-content">
+          <ul class="lesson-list">
+            <li><i class="fa-solid fa-play-circle"></i> Ciclo de refrigeração por compressão <span class="lesson-dur">18min</span></li>
+            <li><i class="fa-solid fa-play-circle"></i> Tipos de fluidos refrigerantes <span class="lesson-dur">22min</span></li>
+            <li><i class="fa-solid fa-play-circle"></i> Leitura de diagramas P-H <span class="lesson-dur">30min</span></li>
+            <li><i class="fa-solid fa-play-circle"></i> Componentes do sistema <span class="lesson-dur">25min</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-item reveal reveal-delay-1">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-num">02</div>
+          <div class="module-name">Elétrica para Técnicos</div>
+          <span class="module-lessons">10 aulas</span>
+          <i class="fa-solid fa-chevron-down module-toggle"></i>
+        </div>
+        <div class="module-content">
+          <ul class="lesson-list">
+            <li><i class="fa-solid fa-play-circle"></i> Circuitos monofásico e trifásico <span class="lesson-dur">24min</span></li>
+            <li><i class="fa-solid fa-play-circle"></i> Aterramento e proteção <span class="lesson-dur">20min</span></li>
+            <li><i class="fa-solid fa-play-circle"></i> Leitura de esquemas elétricos <span class="lesson-dur">35min</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-item reveal reveal-delay-2">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-num">03</div>
+          <div class="module-name">Instalação de Split e Multi-Split</div>
+          <span class="module-lessons">12 aulas</span>
+          <i class="fa-solid fa-chevron-down module-toggle"></i>
+        </div>
+        <div class="module-content">
+          <ul class="lesson-list">
+            <li><i class="fa-solid fa-play-circle"></i> Escolha do local ideal <span class="lesson-dur">16min</span></li>
+            <li><i class="fa-solid fa-play-circle"></i> Dobramento e conexão de tubos <span class="lesson-dur">40min</span></li>
+            <li><i class="fa-solid fa-play-circle"></i> Vácuo e pressurização <span class="lesson-dur">28min</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-item reveal">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-num">04</div>
+          <div class="module-name">Diagnóstico e Manutenção Corretiva</div>
+          <span class="module-lessons">14 aulas</span>
+          <i class="fa-solid fa-chevron-down module-toggle"></i>
+        </div>
+        <div class="module-content">
+          <ul class="lesson-list">
+            <li><i class="fa-solid fa-play-circle"></i> Códigos de erro das principais marcas <span class="lesson-dur">42min</span></li>
+            <li><i class="fa-solid fa-play-circle"></i> Diagnóstico com manômetro e multímetro <span class="lesson-dur">38min</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-item reveal reveal-delay-1">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-num">05</div>
+          <div class="module-name">Higienização Profissional</div>
+          <span class="module-lessons">8 aulas</span>
+          <i class="fa-solid fa-chevron-down module-toggle"></i>
+        </div>
+        <div class="module-content">
+          <ul class="lesson-list">
+            <li><i class="fa-solid fa-play-circle"></i> Produtos bactericidas e fungicidas <span class="lesson-dur">20min</span></li>
+            <li><i class="fa-solid fa-play-circle"></i> Técnica de lavagem do evaporador <span class="lesson-dur">32min</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-item reveal reveal-delay-2">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-num">06</div>
+          <div class="module-name">Sistemas VRF e Comercial</div>
+          <span class="module-lessons">10 aulas</span>
+          <i class="fa-solid fa-chevron-down module-toggle"></i>
+        </div>
+        <div class="module-content">
+          <ul class="lesson-list">
+            <li><i class="fa-solid fa-play-circle"></i> Arquitetura de sistemas VRF <span class="lesson-dur">35min</span></li>
+            <li><i class="fa-solid fa-play-circle"></i> Dimensionamento de redes <span class="lesson-dur">44min</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-item reveal">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-num">07</div>
+          <div class="module-name">Segurança do Trabalho NR-35</div>
+          <span class="module-lessons">6 aulas</span>
+          <i class="fa-solid fa-chevron-down module-toggle"></i>
+        </div>
+        <div class="module-content">
+          <ul class="lesson-list">
+            <li><i class="fa-solid fa-play-circle"></i> EPIs obrigatórios e corretos <span class="lesson-dur">18min</span></li>
+            <li><i class="fa-solid fa-play-circle"></i> Trabalho em altura <span class="lesson-dur">26min</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-item reveal reveal-delay-1">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-num">08</div>
+          <div class="module-name">Gestão e Precificação do Negócio</div>
+          <span class="module-lessons">10 aulas</span>
+          <i class="fa-solid fa-chevron-down module-toggle"></i>
+        </div>
+        <div class="module-content">
+          <ul class="lesson-list">
+            <li><i class="fa-solid fa-play-circle"></i> Como montar seu preço de serviço <span class="lesson-dur">30min</span></li>
+            <li><i class="fa-solid fa-play-circle"></i> Orçamentos que vendem <span class="lesson-dur">24min</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module-item reveal reveal-delay-2">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-num">09</div>
+          <div class="module-name">Bônus: Captação de Clientes Online</div>
+          <span class="module-lessons">9 aulas</span>
+          <i class="fa-solid fa-chevron-down module-toggle"></i>
+        </div>
+        <div class="module-content">
+          <ul class="lesson-list">
+            <li><i class="fa-solid fa-play-circle"></i> Google Meu Negócio para técnicos <span class="lesson-dur">28min</span></li>
+            <li><i class="fa-solid fa-play-circle"></i> WhatsApp Business para atendimento <span class="lesson-dur">20min</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="curriculum-info">
+      <div class="info-card reveal">
+        <h3>O que está incluído</h3>
+        <div class="info-features">
+          <div class="info-feature">
+            <i class="fa-solid fa-video"></i>
+            <div><strong>87 videoaulas em HD</strong>Conteúdo gravado com qualidade profissional e narração clara</div>
+          </div>
+          <div class="info-feature">
+            <i class="fa-solid fa-file-pdf"></i>
+            <div><strong>Apostilas e materiais em PDF</strong>Resumos de cada módulo para consulta rápida no campo</div>
+          </div>
+          <div class="info-feature">
+            <i class="fa-solid fa-table"></i>
+            <div><strong>Planilhas prontas</strong>Orçamento, cálculo de BTU, precificação e controle financeiro</div>
+          </div>
+          <div class="info-feature">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div><strong>Grupo exclusivo de alunos</strong>Tire dúvidas, compartilhe experiências e faça networking</div>
+          </div>
+          <div class="info-feature">
+            <i class="fa-solid fa-certificate"></i>
+            <div><strong>Certificado de conclusão</strong>Com carga horária de 40h para seu currículo</div>
+          </div>
+          <div class="info-feature">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <div><strong>Atualizações inclusas</strong>Sempre que o curso for atualizado, você recebe de graça</div>
+          </div>
+        </div>
+        <div class="price-box">
+          <div class="old">De R$ 897,00 por</div>
+          <div class="new">R$497</div>
+          <div class="installment">ou 12x de R$ 46,80 sem juros</div>
+          <a href="https://wa.me/5500000000000" class="btn-buy">
+            <i class="fa-solid fa-bolt"></i>&nbsp; Garantir minha vaga agora
+          </a>
+          <div class="btn-guarantee">
+            <i class="fa-solid fa-shield-halved"></i>
+            7 dias de garantia — devolução total
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTOR -->
+<section id="instrutor">
+  <div class="instructor-grid">
+    <div class="instructor-visual reveal">
+      <div class="instructor-avatar">CR</div>
+      <div class="instructor-name">Eduardo Carvalho</div>
+      <div class="instructor-role">Especialista em Climatização</div>
+    </div>
+    <div class="instructor-bio reveal reveal-delay-1">
+      <div class="section-label">Seu instrutor</div>
+      <h2 class="section-title">Quem vai te ensinar</h2>
+      <p>Carlos Rocha é fundador da ArcTech Climatização e atua há mais de 12 anos na instalação, manutenção e projetos de climatização residencial, comercial e industrial. Já atendeu mais de 2.500 clientes em todo o estado de São Paulo.</p>
+      <p>Técnico certificado pelo INMETRO, é especialista em sistemas Split, VRF, chiller e fancoil. Além da atuação em campo, dedica parte do seu tempo a formar a próxima geração de técnicos qualificados para o mercado.</p>
+      <div class="instructor-creds">
+        <div class="cred-tag"><i class="fa-solid fa-medal"></i> INMETRO Certificado</div>
+        <div class="cred-tag"><i class="fa-solid fa-users"></i> +2.500 clientes</div>
+        <div class="cred-tag"><i class="fa-solid fa-briefcase"></i> 12 anos de mercado</div>
+        <div class="cred-tag"><i class="fa-solid fa-graduation-cap"></i> +1.200 alunos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="depoimentos">
+  <div class="section-label">Depoimentos</div>
+  <h2 class="section-title">Quem já transformou<br>sua carreira</h2>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="quote-mark">"</div>
+      <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <p class="testimonial-text">Em 3 meses depois de terminar o curso já estava faturando R$6.000/mês como autônomo. O módulo de diagnóstico me salvou em vários atendimentos que eu não saberia resolver antes.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">JP</div>
+        <div>
+          <div class="author-name">João Pedro Alves</div>
+          <div class="author-role">Ex-assistente, hoje técnico autônomo — SP</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-1">
+      <div class="quote-mark">"</div>
+      <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <p class="testimonial-text">Já trabalhava na área há 2 anos mas sem formação técnica. O curso estruturou todo o conhecimento que eu tinha e me deu base para pegar projetos maiores. Valeu muito cada centavo.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">AM</div>
+        <div>
+          <div class="author-name">Ana Moreira</div>
+          <div class="author-role">Técnica em empresa de facilities — MG</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <div class="quote-mark">"</div>
+      <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <p class="testimonial-text">O módulo de negócio e precificação foi o que mais me impactou. Eu cobrava muito barato por não saber calcular o valor do meu serviço. Hoje cobro 3x mais e fecho mais contratos.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">FS</div>
+        <div>
+          <div class="author-name">Felipe Souza</div>
+          <div class="author-role">Dono de empresa de climatização — RJ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-label">Dúvidas frequentes</div>
+  <h2 class="section-title" style="text-align:center">Perguntas frequentes</h2>
+
+  <div class="faq-list">
+    <div class="faq-item open reveal">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <i class="fa-solid fa-circle-question"></i>
+        Preciso ter experiência prévia para fazer o curso?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>Não! O curso foi desenhado para começar do zero absoluto. Os primeiros módulos cobrem toda a teoria fundamental antes de entrar na prática. Quem já tem experiência pode avançar mais rápido pelos módulos iniciais.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal reveal-delay-1">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <i class="fa-solid fa-circle-question"></i>
+        Por quanto tempo terei acesso ao conteúdo?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>O acesso é vitalício. Você pode assistir quando quiser, quantas vezes quiser, do computador, tablet ou celular. E sempre que o conteúdo for atualizado, você recebe automaticamente sem pagar nada a mais.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal reveal-delay-2">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <i class="fa-solid fa-circle-question"></i>
+        E se eu não gostar do curso?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>Você tem 7 dias de garantia total a partir da data da compra. Se por qualquer motivo não ficar satisfeito, basta entrar em contato e devolvemos 100% do valor pago. Sem perguntas, sem burocracia.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <i class="fa-solid fa-circle-question"></i>
+        O certificado é reconhecido no mercado?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>O certificado é emitido pela ArcTech Academy com carga horária de 40 horas e pode ser usado em currículos e portfólios. Para trabalhar como técnico em empresas que exigem certificação INMETRO, recomendamos também fazer a prova oficial do INMETRO.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal reveal-delay-1">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <i class="fa-solid fa-circle-question"></i>
+        Como funciona o suporte pelo WhatsApp?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>Todo aluno é adicionado ao grupo exclusivo do WhatsApp, onde pode tirar dúvidas com o instrutor e com outros alunos. O Carlos responde pessoalmente de segunda a sábado, das 8h às 18h.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal reveal-delay-2">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <i class="fa-solid fa-circle-question"></i>
+        Posso parcelar no cartão?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>Sim! Você pode parcelar em até 12x de R$46,80 sem juros no cartão de crédito. Também aceitamos PIX com 5% de desconto adicional, resultando em apenas R$472,15 à vista.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="comprar">
+  <div class="cta-block reveal">
+    <h2>SUA CARREIRA COMEÇA<br>COM UM CLIQUE</h2>
+    <p>Mais de 1.200 técnicos já mudaram de vida com o curso. Chegou a sua vez. Garanta seu acesso agora e comece hoje mesmo.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/5500000000000" class="btn-white" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp
+      </a>
+      <a href="https://wa.me/5500000000000" class="btn-outline-white" target="_blank">
+        <i class="fa-solid fa-circle-question"></i> Tirar dúvidas antes
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">Arc<span>Tech</span> Academy</div>
+      <p>Formando os melhores técnicos em climatização do Brasil. Conteúdo prático, instrutores experientes e suporte real para quem quer crescer na área.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Curso</h5>
+      <ul>
+        <li><a href="#curriculum">Grade curricular</a></li>
+        <li><a href="#instrutor">Sobre o instrutor</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#faq">Dúvidas frequentes</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Conteúdo</h5>
+      <ul>
+        <li><a href="#dicas">Dicas gratuitas</a></li>
+        <li><a href="#">Blog técnico</a></li>
+        <li><a href="#">Calculadora de BTU</a></li>
+        <li><a href="#">Planilha grátis</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contato</h5>
+      <ul>
+        <li><a href="https://wa.me/5500000000000">WhatsApp</a></li>
+        <li><a href="tel:+5500000000000">(00) 00000-0000</a></li>
+        <li><a href="#">contato@arctech.com.br</a></li>
+        <li><a href="#">Seg–Sab 8h–18h</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 ArcTech Academy. Todos os direitos reservados.</p>
+    <p>Feito com <i class="fa-solid fa-heart" style="color:var(--red)"></i> para quem quer crescer</p>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mouseX=0,mouseY=0,ringX=0,ringY=0;
+document.addEventListener('mousemove',e=>{
+  mouseX=e.clientX; mouseY=e.clientY;
+  cursor.style.transform=`translate(${mouseX-6}px,${mouseY-6}px)`;
+});
+function animateRing(){
+  ringX+=(mouseX-ringX)*0.12; ringY+=(mouseY-ringY)*0.12;
+  ring.style.transform=`translate(${ringX-18}px,${ringY-18}px)`;
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ring.style.width='54px';ring.style.height='54px';});
+  el.addEventListener('mouseleave',()=>{ring.style.width='36px';ring.style.height='36px';});
+});
+
+// Progress bar
+window.addEventListener('scroll',()=>{
+  const total=document.body.scrollHeight-window.innerHeight;
+  const pct=(window.scrollY/total)*100;
+  document.getElementById('progressBar').style.width=pct+'%';
+});
+
+// Particles
+const pc=document.getElementById('particles');
+for(let i=0;i<18;i++){
+  const p=document.createElement('div');
+  p.className='particle';
+  const sz=Math.random()*3+1;
+  const blue=Math.random()>0.5;
+  p.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;background:${blue?'rgba(74,158,255,0.6)':'rgba(227,27,35,0.4)'};animation-duration:${Math.random()*12+8}s;animation-delay:${Math.random()*8}s;`;
+  pc.appendChild(p);
+}
+
+// Reveal
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// Counter
+function animateCount(el,target){
+  let cur=0; const step=target/60;
+  const t=setInterval(()=>{
+    cur+=step;
+    if(cur>=target){cur=target;clearInterval(t);}
+    el.textContent=Math.floor(cur).toLocaleString('pt-BR');
+  },25);
+}
+const statsObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      animateCount(e.target,parseInt(e.target.dataset.count));
+      statsObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.5});
+document.querySelectorAll('.stat-num[data-count]').forEach(el=>statsObs.observe(el));
+
+// Module accordion
+function toggleModule(header){
+  const item=header.closest('.module-item');
+  item.classList.toggle('open');
+}
+
+// FAQ accordion
+function toggleFaq(btn){
+  const item=btn.closest('.faq-item');
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+</script>
+</body>
+</html>
