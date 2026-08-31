@@ -1,0 +1,1039 @@
+/* 
+   HONORATO BARBEARIA - PREMIUM STYLESHEET
+   Refactored UX/UI Design System
+*/
+
+/* Design System Variables */
+:root {
+    --bg-primary: #0b0b0b;       /* Rich Deep Charcoal */
+    --bg-secondary: #121212;     /* Card background & section alternations */
+    --bg-card: #171717;          /* Soft card surfaces */
+    --color-gold: #d4af37;       /* Authentic Luxury Gold */
+    --color-gold-hover: #f5deb3;  /* Soft Wheat Gold for hover */
+    --color-wheat: #e6c280;      /* Vintage Wheat Accent */
+    --color-text-white: #ffffff;
+    --color-text-muted: #a3a3a3;  /* Subtitles & details */
+    --color-whatsapp: #25D366;   /* WhatsApp Official Green */
+    --color-whatsapp-hover: #1ebd59;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --border-radius-sm: 6px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 20px;
+    
+    --shadow-premium: 0 12px 40px rgba(0, 0, 0, 0.6);
+    --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.15);
+}
+
+/* Global Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: var(--color-text-white);
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+/* Layout Containers */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    width: 100%;
+}
+
+/* Modern Section Dividers */
+hr {
+    margin: 0;
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(212, 175, 55, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Section: Hero / Sobre */
+.sobre {
+    background-image: linear-gradient(to bottom, rgba(11, 11, 11, 0.8) 0%, rgba(11, 11, 11, 0.95) 100%), url('imgs/textura-tijolos.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.sobre-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sobre h1 {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    color: var(--color-text-white);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.sobre h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color-gold);
+    margin-top: 10px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Redesigned Premium Buttons System */
+.hero-cta-container, .agende-cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 650px;
+    margin-bottom: 50px;
+}
+
+.btn-whatsapp-group {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.btn-premium {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    padding: 14px 28px;
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    box-shadow: var(--shadow-premium);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-premium i {
+    font-size: 26px;
+}
+
+.btn-text-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.btn-title {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.btn-subtitle {
+    font-size: 11px;
+    opacity: 0.8;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+/* Gold Primary CTA */
+.btn-primary-gold {
+    background-color: var(--color-gold);
+    color: #000;
+    border: 2px solid var(--color-gold);
+}
+
+.btn-primary-gold i {
+    color: #000;
+}
+
+.btn-primary-gold:hover {
+    background-color: transparent;
+    color: var(--color-gold);
+    border-color: var(--color-gold);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary-gold:hover i {
+    color: var(--color-gold);
+}
+
+/* WhatsApp CTAs */
+.btn-secondary-whatsapp {
+    background-color: transparent;
+    color: var(--color-text-white);
+    border: 2px solid var(--color-whatsapp);
+    flex: 1;
+}
+
+.btn-secondary-whatsapp i {
+    color: var(--color-whatsapp);
+}
+
+.btn-secondary-whatsapp:hover {
+    background-color: var(--color-whatsapp);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+}
+
+.btn-secondary-whatsapp:hover i {
+    color: #000;
+}
+
+/* Premium Aspect-Ratio YouTube Wrapper */
+.video-wrapper {
+    width: 100%;
+    max-width: 800px;
+    padding: 8px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(0, 0, 0, 0));
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-premium), var(--shadow-gold);
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    margin-top: 10px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: calc(var(--border-radius-lg) - 8px);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Section: Instagram */
+.instagram-section {
+    background-color: var(--bg-secondary);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section: Serviços */
+.servicos {
+    background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.9) 0%, rgba(18, 18, 18, 0.95) 100%), url('imgs/textura-tijolos.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.servicos h1 {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.servicos h1::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-gold);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.servicos .container-2 {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Premium Services Cards */
+.card-s {
+    background-color: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: var(--border-radius-lg);
+    width: 350px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: var(--shadow-premium);
+    transition: var(--transition-smooth);
+}
+
+.card-s:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 175, 55, 0.25);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 5px 20px rgba(212, 175, 55, 0.08);
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.card-s:hover .card-img-wrapper img {
+    transform: scale(1.08);
+}
+
+.card-content {
+    padding: 30px 24px 15px 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-s h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-text-white);
+}
+
+.card-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-gold);
+    margin-bottom: 5px;
+}
+
+.card-s p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.card-actions {
+    display: flex;
+    gap: 12px;
+    padding: 0 24px 30px 24px;
+}
+
+.btn-card-booking {
+    flex: 1;
+    padding: 11px 12px;
+    text-decoration: none;
+    color: var(--color-text-white);
+    background-color: transparent;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-card-booking i {
+    color: var(--color-gold);
+    font-size: 13px;
+    transition: var(--transition-smooth);
+}
+
+.btn-card-booking:hover {
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+    color: #000;
+}
+
+.btn-card-booking:hover i {
+    color: #000;
+}
+
+/* Section: Nosso Espaço */
+.depoimentos.espaco {
+    background-color: var(--bg-primary);
+    padding: 100px 0;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.espaco .container-2 {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.first-div-depoimentos {
+    flex: 1.1;
+    width: 100%;
+}
+
+.second-div-depoimentos {
+    flex: 0.9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.second-div-depoimentos h1 {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-text-white);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.ul-espaco {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ul-espaco li {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: var(--color-text-white);
+    font-weight: 500;
+}
+
+.ul-espaco i {
+    color: var(--color-gold);
+    font-size: 20px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(212, 175, 55, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+/* Carousel Adjustments */
+.carousel.slide {
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-premium), var(--shadow-gold);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.carousel-inner {
+    width: 100%;
+    margin: 0;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+}
+
+/* Section: Agende Agora */
+.agende {
+    background-image: linear-gradient(to bottom, rgba(11, 11, 11, 0.92) 0%, rgba(11, 11, 11, 0.97) 100%), url('imgs/textura-tijolos.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agende-content {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agende h1 {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-text-white);
+    line-height: 1.2;
+}
+
+.agende-subtitle {
+    font-size: 16px;
+    color: var(--color-gold);
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+.agende-cta-container {
+    max-width: 550px;
+    margin-bottom: 0;
+}
+
+/* Section: Localização e Contato */
+.final {
+    background-color: var(--bg-secondary);
+    padding: 80px 0;
+}
+
+.final-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.final-div {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius-lg);
+    padding: 40px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: var(--shadow-premium);
+    transition: var(--transition-smooth);
+}
+
+.final-div:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.15);
+}
+
+.contact-icon {
+    font-size: 32px;
+    color: var(--color-gold);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    background-color: rgba(212, 175, 55, 0.07);
+    border-radius: 50%;
+}
+
+.final-div h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-white);
+    margin-bottom: 12px;
+}
+
+.unit-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-gold);
+    margin-bottom: 14px;
+}
+
+.final-div p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: 4px;
+}
+
+.final-div p i {
+    color: var(--color-gold);
+    margin-right: 6px;
+}
+
+.btn-maps {
+    margin-top: 24px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: var(--color-text-white);
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-maps:hover {
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+    color: #000;
+}
+
+/* Footer Section */
+footer {
+    background-color: #060606;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px 0;
+}
+
+footer .container-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer div {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+footer div span {
+    margin-left: 14px;
+}
+
+footer div span a {
+    font-size: 18px;
+    color: var(--color-text-muted);
+    transition: var(--transition-smooth);
+}
+
+footer div span a:hover {
+    color: var(--color-gold);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVENESS)
+   ========================================================================== */
+@media (max-width: 991px) {
+    .espaco .container-2 {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .first-div-depoimentos, .second-div-depoimentos {
+        width: 100%;
+        flex: none;
+    }
+    
+    .second-div-depoimentos {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .final-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .carousel-item img {
+        height: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    body, html {
+        font-size: 15px;
+    }
+    
+    .no-scroll {
+        overflow: hidden;
+        height: 100%;
+    }
+    
+    /* Sections spacing */
+    .sobre, .servicos, .depoimentos.espaco, .agende, .final {
+        padding: 60px 0;
+    }
+
+    /* Hero adjustments */
+    .sobre h1 {
+        font-size: 30px;
+    }
+    
+    .sobre h2 {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .btn-whatsapp-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .btn-premium {
+        padding: 12px 20px;
+        gap: 12px;
+    }
+    
+    .btn-premium i {
+        font-size: 22px;
+    }
+    
+    .btn-title {
+        font-size: 14px;
+    }
+
+    .btn-subtitle {
+        font-size: 10px;
+    }
+
+    /* Services adjustments */
+    .servicos h1 {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .card-s {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Espaço list adjustments */
+    .second-div-depoimentos h1 {
+        font-size: 30px;
+    }
+    
+    .ul-espaco {
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Agende Section */
+    .agende h1 {
+        font-size: 30px;
+    }
+    
+    .agende-subtitle {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    /* Footer layout */
+    footer .container-2 {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    footer div span {
+        margin: 0 10px;
+    }
+}
+
+/* ==========================================================================
+   INSTAGRAM PREMIUM LANDSCAPE CARD
+   ========================================================================== */
+.instagram-section {
+    background-color: var(--bg-primary);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.insta-premium-card {
+    display: flex;
+    width: 100%;
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: var(--shadow-premium);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    text-align: left;
+}
+
+.insta-premium-card:hover {
+    border-color: rgba(212, 175, 55, 0.25);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), var(--shadow-gold);
+}
+
+.insta-profile-col {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.insta-avatar-wrapper {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+}
+
+.insta-story-ring {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    padding: 2px;
+}
+
+.insta-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--bg-card);
+    position: relative;
+    z-index: 2;
+    background-color: #000;
+}
+
+.insta-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.insta-badge {
+    background-color: rgba(212, 175, 55, 0.08);
+    color: var(--color-gold);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.insta-badge i {
+    color: var(--color-gold);
+    font-size: 12px;
+}
+
+.insta-handle {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-text-white);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.insta-bio {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.insta-stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 22px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-count {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text-white);
+}
+
+.stat-label {
+    font-size: 10px;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-insta-follow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 24px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 50%, #bc1888 100%);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 15px rgba(220, 39, 67, 0.25);
+    transition: var(--transition-smooth);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-insta-follow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(220, 39, 67, 0.4);
+    color: #fff;
+}
+
+/* Instagram Gallery Column */
+.insta-gallery-col {
+    flex: 1.1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.insta-gallery-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.insta-gallery-title i {
+    color: var(--color-gold);
+}
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.insta-post {
+    position: relative;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    aspect-ratio: 1;
+    display: block;
+}
+
+.insta-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.insta-post-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(11, 11, 11, 0.6);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.insta-post-overlay i {
+    color: var(--color-gold);
+    font-size: 24px;
+    transform: scale(0.7);
+    transition: var(--transition-smooth);
+}
+
+.insta-post:hover img {
+    transform: scale(1.08);
+}
+
+.insta-post:hover .insta-post-overlay {
+    opacity: 1;
+}
+
+.insta-post:hover .insta-post-overlay i {
+    transform: scale(1);
+}
+
+/* Responsiveness for Instagram Card */
+@media (max-width: 991px) {
+    .insta-premium-card {
+        flex-direction: column;
+    }
+    
+    .insta-profile-col {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 35px;
+    }
+    
+    .insta-gallery-col {
+        padding: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .insta-profile-col {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .insta-info {
+        align-items: center;
+    }
+    
+    .insta-bio {
+        text-align: center;
+    }
+    
+    .insta-grid {
+        gap: 10px;
+    }
+}

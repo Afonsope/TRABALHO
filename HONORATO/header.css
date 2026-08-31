@@ -1,0 +1,230 @@
+/* 
+   HONORATO BARBEARIA - PREMIUM HEADER STYLES
+   Refactored Navigation & Mobile Sidebar
+*/
+
+header {
+    background-color: rgba(11, 11, 11, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    display: block;
+    transition: var(--transition-smooth);
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.logo-grande {
+    width: 160px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.5));
+}
+
+nav.nav-sidebar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+}
+
+nav.nav-sidebar ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+nav.nav-sidebar ul li a {
+    text-decoration: none;
+    color: var(--color-text-white);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+    padding: 10px 0;
+}
+
+/* Premium Hover Indicator for Nav Items */
+nav.nav-sidebar ul li.nav-item a:hover {
+    color: var(--color-gold);
+}
+
+nav.nav-sidebar ul li.nav-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    height: 2px;
+    background-color: var(--color-gold);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav.nav-sidebar ul li.nav-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Instagram link in header */
+.icon-header a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-header i {
+    font-size: 16px;
+    color: var(--color-gold);
+}
+
+/* Compact Premium Booking Button */
+.agendar-btn {
+    padding: 10px 24px;
+    border: 2px solid var(--color-gold);
+    border-radius: var(--border-radius-md);
+    background-color: transparent;
+    color: var(--color-gold) !important;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: var(--transition-smooth);
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.05);
+}
+
+.agendar-btn:hover {
+    background-color: var(--color-gold);
+    color: #000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
+}
+
+/* Menu Hambúrguer (Mobile) */
+.menu-hamburguer {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    width: 30px;
+    height: 24px;
+    justify-content: center;
+    z-index: 1100;
+}
+
+.menu-hamburguer .barra {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-text-white);
+    border-radius: 2px;
+    transition: var(--transition-smooth);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (HEADER RESPONSIVENESS)
+   ========================================================================== */
+@media (max-width: 991px) {
+    .header-container {
+        height: 80px;
+    }
+    
+    .logo img {
+        height: 60px;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+    }
+
+    /* Elegant Mobile Sidebar Menu */
+    nav.nav-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(11, 11, 11, 0.98);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.4s cubic-bezier(0.1, 1, 0.1, 1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1050;
+    }
+
+    /* Open State */
+    nav.nav-sidebar.ativo {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav.nav-sidebar ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    nav.nav-sidebar ul li {
+        margin: 0;
+    }
+
+    nav.nav-sidebar ul li a {
+        font-size: 18px;
+        letter-spacing: 2px;
+        padding: 10px 20px;
+    }
+
+    .agendar-btn {
+        font-size: 16px;
+        padding: 14px 40px;
+        margin-top: 10px;
+    }
+
+    /* Hamburger Menu Morphing to "X" */
+    .menu-hamburguer.ativo .barra:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background-color: var(--color-gold);
+    }
+
+    .menu-hamburguer.ativo .barra:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .menu-hamburguer.ativo .barra:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: var(--color-gold);
+    }
+}
