@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luigi Sapataria</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="estilos/index.css">
+    <script>
+      window.addEventListener('load', function() {
+        // Remove o hash da URL e volta para o topo
+        if (window.location.hash) {
+          history.replaceState(null, null, window.location.pathname);
+          window.scrollTo(0, 0);
+        }
+      });
+    </script>
+    
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="menu">
+          <div>
+            <a href="#inicio">Início</a>
+          </div>
+          <div>
+            <a href=#sapatos>Os Sapatos</a>
+          </div>
+          <div>
+            <a href="#elegancia">Elegância</a>
+          </div>
+          <div>
+            <a href="#sobre-nos">Sobre nós</a>
+          </div>
+          <div>
+            <a href="#contato">Contato</a>
+          </div>
+        </div>
+      </nav>
+      <article class="inicio" id="inicio">
+        <div class="inicio-container">
+          <div>
+            <h1>Luigi</h1>
+            <h2>Sapataria</h2>
+          </div>
+          <div class="img-bandeira">
+            <img src="imagens/luigi_logo.png" alt="bandeira da Itália">
+          </div>
+          <div class="img-sapato">
+            <img src="imagens/sapatos/sapato-preto.png" alt="">
+          </div>
+          <div>
+            <h3>Passos que contam <br>histórias</h3>
+          </div>
+        </div>
+        </article>
+    </header>
+    <main>
+        <article class="sapatos" id="sapatos">
+          <div class="container-sapatos">
+            <div>
+              <h1>
+                Os Sapatos
+              </h1>
+            </div>
+            <div>
+              <div>
+                <a href="paginas/sapatos/sapatos.html">
+                  <h2>Saiba<br>mais</h2>
+                </a>
+              </div>
+              <div class="sapatos-mais">
+                <a href="paginas/sapatos/sapatos.html"><img src="imagens/logos/plus-branco.png" alt="sinal de mais">
+                </a>
+              </div>
+            </div>
+            <div class="sapatos-sapato-social">
+              <img src="imagens/sapatos/lateral-sapato.png" alt="Sapato social preto">
+            </div>
+          </div>
+        </article>
+
+        <article class="elegancia" id="elegancia">
+          <div class="container-elegancia">
+            <div>
+              <h1>Elegância</h1>
+            </div>
+            <div class="elegancia-maquina">
+              <img src="imagens/maquina.png" alt="Máquina de escrever antiga">
+            </div>
+            <div>
+              <h2>
+                Dicas de moda,<br>
+                cuidados com suas <br>
+                peças e muito <br>
+                mais.
+              </h2>
+            </div>
+            <div class="elegancia-saiba-mais">
+              <div class="elegancia-saiba-mais-texto">
+                <a href="paginas/elegancia/elegancia.html">
+                <h3>Saiba<br>mais</h3></a>
+              </div>
+              <div class="elegancia-mais">
+                <a href="paginas/elegancia/elegancia.html"><img src="imagens/logos/plus-claro.png" alt="sinal de mais"></a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="sobre-nos" id="sobre-nos">
+          <div class="container-sobre-nos">
+            <div>
+              <h1>Sobre nós</h1>
+            </div>
+            <div>
+              <img src="imagens/fachada.jpg" alt="fachada da loja luigi sapatatia">
+            </div>
+            <div>
+              <p>
+                Fundada em 2007, a Luigi Sapataria nasceu com a missão de oferecer calçados e acessórios masculinos em couro nobre, com excelência em qualidade e um atendimento personalizado. O nome Luigi é uma homenagem ao fundador, Luis, adaptado para o italiano em alinhamento à proposta da marca: sofisticação com inspiração europeia. Nosso logotipo traz, com orgulho, a bandeira da Itália, referência ao estilo que guia nossos produtos. Somos a única loja de rua na cidade especializada exclusivamente em calçados masculinos 100% em couro legítimo. Aqui o antigo se reinventa unindo elegância com modernidade.
+                Na Luigi Sapataria, cada passo é um reflexo de estilo, tradição e respeito ao cliente.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="fotos" id="fotos">
+          <div class="container-fotos">
+            <div class="foto-logo">
+              <img src="imagens/nome-luigi.png" alt="foto da logo">
+            </div>
+            <div class="foto-1">
+              <img src="imagens/poltrona.jpg" alt="foto da loja">
+            </div>
+            <div class="foto-2">
+              <img src="imagens/canto.jpg" alt="foto da loja">
+            </div>
+            <div class="foto-3">
+              <img src="imagens/prateleira.jpg" alt="foto da loja">
+            </div>
+          </div>
+        </article>
+    </main>
+    <footer>
+      <div class="container-footer" id="contato">
+        <div class="footer-luigi">
+          <h1>Luigi Sapataria</h1>
+        </div>
+        <div class="footer-paginas">
+          <div class="footer-inicio">
+            <a href="#inicio"><p>Início</p></a>                
+          </div>
+          <div class="footer-sapatos">
+            <a href="#sapatos"><p>Os Sapatos</p></a>
+          </div>  
+          <div class="footer-elegancia">
+            <a href="#elegancia"><p>Elegância</p></a>
+          </div>
+          <div class="footer-sobre-nos">
+            <a href="#sobre-nos"><p>Sobre Nós</p></a>
+          </div>
+          <div class="footer-contato">
+            <a href="#"><p>Contato</p></a>
+          </div>
+        </div>
+        <div class="footer-fotos">
+          <div class="footer-insta">
+            <a href="https://www.instagram.com/luigisapataria/" target="_blank"><img src="imagens/logos/instagram.png" alt="instagram"></a>
+          </div>
+          <div class="footer-face">
+            <a href="https://www.facebook.com/luigisapataria/?locale=pt_BR" target="_blank"><img src="imagens/logos/facebook.png" alt="facebook"></a>
+          </div>
+          <div class="footer-whats">
+            <a href="https://wa.me/5517982318618" target="_blank"><img src="imagens/logos/whatsapp.png" alt="whatsapp"></a>
+          </div>
+          <div class="footer-map">
+            <a href="" target="_blank"><img src="imagens/logos/geo-alt.png" alt="localização"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>

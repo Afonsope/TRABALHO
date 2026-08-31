@@ -1,0 +1,285 @@
+@charset "UTF-8";
+*{
+    padding: 0px;
+    margin: 0px;
+}
+:root{
+    --branco: #ffffff;
+    --claro: #B7B7A4; 
+    --medio: #A5A58D;
+    --escuro: #696D5B;
+    --cinza: #E6E6E6;
+    --cinza-escuro: #313131;
+}
+
+header{
+    background-color:#696D5B ;
+    height:50px;
+}
+.menu{
+    padding-top: 10px;
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 1.3em;
+}
+.elegancia{
+    background-color: var(--claro);
+    height: 780px;
+}
+.elegancia-container{
+    position: relative;
+}
+.elegancia-elegancia h1{
+    border: 3px solid var(--escuro);
+    position: absolute;
+    top: 80px;
+    font-size: 9em;
+    font-weight: bold;
+    color: var(--escuro);
+    transform: translateX(-50%);
+    left: 50%;
+}
+.elegancia h2{
+    font-size: 5em;
+    color: var(--cinza);
+    position: absolute;
+    top: 360px;
+    left: 300px;
+}
+.elegancia p{
+    font-size: 1.5em;
+    color: var(--cinza);
+    position: absolute;
+    width: 600px;
+    top: 450px;
+    left: 550px;
+}
+.container{
+    width: 100%;
+}
+.artigos{
+    background-color: var(--cinza);
+    height: 2100px;
+}
+.artigos h1{
+    font-size: 6em;
+    text-align: right;
+    padding: 80px;
+    color: var(--escuro);
+}
+.artigos a {
+    display: block;
+    margin: 10px 0;
+    color: blue;
+    cursor: pointer;
+}
+.artigos-modal{
+    display: inline-block;
+    width: 47%;
+    padding: 60px 50px 60px 100px;
+    text-align: center;
+}
+.artigos-modal h2{
+    font-size: 6em;
+    color: var(--claro);
+}
+.artigos-modal h3{
+    font-size: 3em;
+    color: var(--cinza-escuro);
+}
+.artigos-modal p{
+    font-size: 1.2em;
+    color: var(--escuro);
+    text-align: center;
+}
+.linha{
+    background-color: var(--claro);
+    height: 2px;
+    width: 90%;
+    margin: auto;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+.modal p{
+    font-size: 1.2em;
+    line-height: 1.6em;
+    text-indent: 1.5em;
+    text-align: justify;
+    padding: 30px;
+}
+.modal h3{
+    text-align: center;
+    padding: 30px;
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+#modal5{
+   padding-top: 350px; 
+}
+#modal6{
+    padding-top: 690px; 
+}
+#modal7{
+    padding-top: 420px; 
+}
+#modal7 ul{
+    padding-left: 70px;
+}
+.close {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#p1{
+    padding-top: 30px;
+    padding-bottom: 0px;
+}
+#p2{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#p3{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#p4{
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+#p5{
+    padding-top: 30px;
+    padding-bottom: 0px;
+}
+#p6{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#p7{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#p8{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#p9{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#p10{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#p11 {
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+#p12 {
+    padding-top: 30px;
+    padding-bottom: 0px;
+}
+#p13 {
+    padding: 0 30px 0 0;
+}
+#p14 {
+    padding: 0 30px 0 0;
+}
+#p15 {
+    padding: 0 30px 0 0;
+}
+#p16 {
+    padding: 0 30px 0 0;
+}
+#p17 {
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+footer{
+    background-color:var(--escuro) ;
+    height: 200px;
+}
+.container-footer{
+    position: relative;
+}
+.container-footer img{
+    width: 20px;
+}
+.footer-luigi h1{
+    font-size: 1.2em;
+    color: var(--cinza);
+    font-weight: normal;
+    position: absolute;
+    top: 40px;
+    left: 655px;
+}
+.footer-paginas a{
+    text-decoration: none;
+    color: var(--claro);
+}
+.footer-inicio{
+    position: absolute;
+    top: 90px;
+    left: 505px;
+}
+.footer-sapatos{
+    position: absolute;
+    top: 90px;
+    left: 569px;
+}
+.footer-elegancia{
+    position: absolute;
+    top: 90px;
+    left: 683px;
+}
+.footer-sobre-nos{
+    position: absolute;
+    top: 90px;
+    left: 784px;
+}
+.footer-contato{
+    position: absolute;
+    top: 90px;
+    left: 890px;
+}
+.footer-insta{
+    position: absolute;
+    top: 140px;
+    left: 650px;
+}
+.footer-face{
+    position: absolute;
+    top: 140px;
+    left: 690px;
+}
+.footer-whats{
+    position: absolute;
+    top: 140px;
+    left: 730px;
+}
+.footer-map{
+    position: absolute;
+    top: 140px;
+    left: 770px;
+}
+
