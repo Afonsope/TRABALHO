@@ -1,0 +1,1065 @@
+/* ==========================================================================
+   HONORATO BARBEARIA - UNIDADES DESIGN SYSTEM & COMPONENT STYLES
+   Modular styles for Unidade 1 (Santos Dumont) & Unidade 2 (Redentora)
+   and main page Unit Showcase sections
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO & COMMON UNIT BUTTONS (MAIN PAGE & UNIT PAGES)
+   -------------------------------------------------------------------------- */
+.btn-unidades-group {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.btn-secondary-unit {
+    background-color: rgba(255, 255, 255, 0.04);
+    color: var(--color-text-white);
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    flex: 1;
+    backdrop-filter: blur(8px);
+}
+
+.btn-secondary-unit i {
+    color: var(--color-gold);
+    transition: var(--transition-smooth);
+}
+
+.btn-secondary-unit:hover {
+    background-color: var(--color-gold);
+    color: #0b0b0b;
+    border-color: var(--color-gold);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+}
+
+.btn-secondary-unit:hover i {
+    color: #0b0b0b;
+}
+
+.btn-secondary-unit:hover .btn-subtitle {
+    opacity: 0.95;
+    color: #1a1a1a;
+}
+
+/* Secondary Map & Direction Button */
+.btn-secondary-maps {
+    background-color: transparent;
+    color: var(--color-text-white);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary-maps i {
+    color: var(--color-gold);
+}
+
+.btn-secondary-maps:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+    transform: translateY(-3px);
+}
+
+/* --------------------------------------------------------------------------
+   2. MAIN PAGE: NOSSAS UNIDADES SHOWCASE SECTION
+   -------------------------------------------------------------------------- */
+.unidades-home-section {
+    background-color: var(--bg-secondary);
+    padding: 85px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.unidades-home-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-header-centered {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.badge-tag-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-gold);
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+}
+
+.section-header-centered h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--color-text-white);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header-centered h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-gold);
+    border-radius: 2px;
+}
+
+.section-header-centered p {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.unidades-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    width: 100%;
+}
+
+.unidade-showcase-card {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+    box-shadow: var(--shadow-premium);
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+}
+
+.unidade-showcase-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 175, 55, 0.35);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), var(--shadow-gold);
+}
+
+.unidade-card-media {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.unidade-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.unidade-showcase-card:hover .unidade-card-media img {
+    transform: scale(1.08);
+}
+
+.unidade-pill-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(11, 11, 11, 0.85);
+    backdrop-filter: blur(8px);
+    color: var(--color-gold);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.unidade-pill-badge.modern {
+    color: #fff;
+    border-color: var(--color-gold);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.9), rgba(18, 18, 18, 0.95));
+}
+
+.unidade-card-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.unidade-card-body h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text-white);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.unidade-card-subtitle {
+    color: var(--color-gold);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.unidade-card-address {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.unidade-card-address i {
+    color: var(--color-gold);
+}
+
+.unidade-card-text {
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    flex-grow: 1;
+}
+
+.unidade-features-list-mini {
+    margin: 0 0 25px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.unidade-features-list-mini li {
+    font-size: 13px;
+    color: var(--color-text-white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.unidade-features-list-mini li i {
+    color: var(--color-gold);
+    font-size: 14px;
+}
+
+/* Conhecer Unidade Button inside Cards */
+.btn-conhecer-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 20px;
+    background-color: var(--color-gold);
+    color: #0b0b0b;
+    border: 2px solid var(--color-gold);
+    border-radius: var(--border-radius-md);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.btn-conhecer-cta:hover {
+    background-color: transparent;
+    color: var(--color-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+/* Secondary Button inside footer/final cards */
+.final-div-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-conhecer-mini {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 16px;
+    background-color: rgba(212, 175, 55, 0.12);
+    color: var(--color-gold);
+    border: 1px solid var(--color-gold);
+    border-radius: var(--border-radius-md);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: var(--transition-smooth);
+}
+
+.btn-conhecer-mini:hover {
+    background-color: var(--color-gold);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   3. DEDICATED UNIT PAGE: BREADCRUMBS & NAVIGATION
+   -------------------------------------------------------------------------- */
+.unit-breadcrumb-bar {
+    background-color: rgba(11, 11, 11, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 14px 0;
+}
+
+.unit-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+.unit-breadcrumb a {
+    color: var(--color-text-muted);
+}
+
+.unit-breadcrumb a:hover {
+    color: var(--color-gold);
+}
+
+.unit-breadcrumb .separator {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 10px;
+}
+
+.unit-breadcrumb .current {
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   4. DEDICATED UNIT PAGE: HERO SECTION
+   -------------------------------------------------------------------------- */
+.unit-hero {
+    background-image: linear-gradient(to bottom, rgba(11, 11, 11, 0.82) 0%, rgba(11, 11, 11, 0.96) 100%), url('imgs/textura-tijolos.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 70px 0 60px;
+    text-align: center;
+}
+
+.unit-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.unit-hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid var(--color-gold);
+    color: var(--color-gold);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 22px;
+}
+
+.unit-hero h1 {
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-text-white);
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.unit-hero-tagline {
+    font-size: 18px;
+    color: var(--color-gold);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+/* Quick Info Chips */
+.unit-quick-chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.chip-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(23, 23, 23, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 8px 16px;
+    border-radius: var(--border-radius-sm);
+    font-size: 13px;
+    color: #e0e0e0;
+}
+
+.chip-item i {
+    color: var(--color-gold);
+}
+
+.unit-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 720px;
+    margin-bottom: 30px;
+}
+
+.unit-hero-actions .btn-premium {
+    flex: 1 1 200px;
+}
+
+/* --------------------------------------------------------------------------
+   5. DEDICATED UNIT PAGE: ABOUT / STORY SECTION
+   -------------------------------------------------------------------------- */
+.unit-about-section {
+    background-color: var(--bg-primary);
+    padding: 85px 0;
+}
+
+.unit-about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+.unit-about-text h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--color-text-white);
+    margin-bottom: 18px;
+    line-height: 1.25;
+}
+
+.unit-about-text h2 span {
+    color: var(--color-gold);
+}
+
+.unit-about-lead {
+    font-size: 16px;
+    color: var(--color-wheat);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.unit-about-text p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.unit-highlights-list {
+    margin: 25px 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.unit-highlights-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: #dedede;
+    line-height: 1.5;
+}
+
+.unit-highlights-list li i {
+    color: var(--color-gold);
+    font-size: 16px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* About Media Showcase Card */
+.unit-about-card {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-premium), var(--shadow-gold);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.unit-about-card img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition-smooth);
+}
+
+.unit-about-card:hover img {
+    transform: scale(1.03);
+}
+
+.unit-about-card-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(11, 11, 11, 0.88);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: var(--border-radius-md);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.badge-icon-box {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(212, 175, 55, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.badge-icon-box i {
+    color: var(--color-gold);
+    font-size: 22px;
+}
+
+.badge-details h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-text-white);
+    margin: 0 0 2px 0;
+}
+
+.badge-details p {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. DEDICATED UNIT PAGE: GALLERY & CAROUSEL
+   -------------------------------------------------------------------------- */
+.unit-gallery-section {
+    background-color: var(--bg-secondary);
+    padding: 85px 0;
+}
+
+.unit-gallery-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-tabs-content {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Space Carousel Styling for Unit Pages */
+.unit-carousel-container {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    box-shadow: var(--shadow-premium);
+    margin-bottom: 50px;
+}
+
+.unit-carousel-inner .carousel-item {
+    height: 480px;
+    position: relative;
+    background-color: #000;
+}
+
+.unit-carousel-inner .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.unit-carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(11, 11, 11, 0.95) 0%, rgba(11, 11, 11, 0) 100%);
+    padding: 40px 30px 25px;
+    text-align: left;
+}
+
+.unit-carousel-caption h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text-white);
+    margin-bottom: 6px;
+}
+
+.unit-carousel-caption p {
+    font-size: 14px;
+    color: var(--color-gold);
+    margin: 0;
+}
+
+/* Cuts / Portfolio Grid for this Unit */
+.portfolio-subtitle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 14px;
+}
+
+.portfolio-subtitle-row h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-text-white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.portfolio-subtitle-row h3 i {
+    color: var(--color-gold);
+}
+
+.unit-portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    width: 100%;
+}
+
+.unit-portfolio-card {
+    position: relative;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    background-color: var(--bg-card);
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: var(--shadow-premium);
+    transition: var(--transition-smooth);
+}
+
+.unit-portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(11, 11, 11, 0.92) 0%, rgba(11, 11, 11, 0.2) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.unit-portfolio-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+.unit-portfolio-card:hover img {
+    transform: scale(1.08);
+}
+
+.unit-portfolio-card:hover .portfolio-card-overlay {
+    opacity: 1;
+}
+
+.portfolio-card-overlay h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-text-white);
+    margin: 0 0 4px 0;
+}
+
+.portfolio-card-overlay span {
+    font-size: 12px;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------------------------
+   7. DEDICATED UNIT PAGE: AMENITIES & DIFFERENTIALS
+   -------------------------------------------------------------------------- */
+.unit-amenities-section {
+    background-color: var(--bg-primary);
+    padding: 85px 0;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+}
+
+.amenity-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius-md);
+    padding: 30px 25px;
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.amenity-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.amenity-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--border-radius-sm);
+    background-color: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.amenity-icon-box i {
+    font-size: 22px;
+    color: var(--color-gold);
+}
+
+.amenity-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text-white);
+    margin-bottom: 10px;
+}
+
+.amenity-card p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. DEDICATED UNIT PAGE: LOCATION, HOURS & CONTACT DETAILS
+   -------------------------------------------------------------------------- */
+.unit-info-section {
+    background-color: var(--bg-secondary);
+    padding: 85px 0;
+}
+
+.unit-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    width: 100%;
+}
+
+.unit-info-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius-lg);
+    padding: 35px;
+    box-shadow: var(--shadow-premium);
+    display: flex;
+    flex-direction: column;
+}
+
+.unit-info-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-text-white);
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 14px;
+}
+
+.unit-info-card h3 i {
+    color: var(--color-gold);
+}
+
+.unit-address-block {
+    margin-bottom: 24px;
+}
+
+.unit-address-block p {
+    font-size: 15px;
+    color: #e0e0e0;
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.unit-address-block .address-highlight {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--color-gold);
+}
+
+/* Hours Table */
+.hours-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.hours-table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.hours-table td {
+    padding: 12px 0;
+    font-size: 14px;
+}
+
+.hours-table .day-name {
+    color: #dedede;
+    font-weight: 500;
+}
+
+.hours-table .day-hours {
+    text-align: right;
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+.hours-table .day-closed {
+    text-align: right;
+    color: #777;
+    font-style: italic;
+}
+
+.contact-quick-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 15px;
+}
+
+.contact-quick-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #dedede;
+    font-size: 14px;
+}
+
+.contact-quick-item i {
+    color: var(--color-gold);
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-quick-item a:hover {
+    color: var(--color-gold);
+}
+
+/* --------------------------------------------------------------------------
+   9. CROSS-UNIT SWITCHER BANNER
+   -------------------------------------------------------------------------- */
+.unit-switcher-section {
+    background-color: var(--bg-primary);
+    padding: 60px 0;
+}
+
+.unit-switcher-card {
+    background: linear-gradient(135deg, rgba(23, 23, 23, 0.95), rgba(11, 11, 11, 0.98));
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: var(--border-radius-lg);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    box-shadow: var(--shadow-premium), var(--shadow-gold);
+}
+
+.switcher-text-col h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text-white);
+    margin-bottom: 8px;
+}
+
+.switcher-text-col p {
+    font-size: 15px;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.switcher-action-col {
+    flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   10. RESPONSIVE MEDIA QUERIES (UNIDADES)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+    .unidades-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .unit-about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .unit-about-card img {
+        height: 350px;
+    }
+
+    .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .unit-info-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .unit-switcher-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+        padding: 30px;
+    }
+
+    .unit-carousel-inner .carousel-item {
+        height: 360px;
+    }
+
+    .unit-portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-unidades-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .unit-hero h1 {
+        font-size: 30px;
+    }
+
+    .unit-hero-tagline {
+        font-size: 15px;
+    }
+
+    .section-header-centered h2 {
+        font-size: 28px;
+    }
+
+    .unit-card-media {
+        height: 200px;
+    }
+
+    .unit-card-body {
+        padding: 22px 18px;
+    }
+
+    .unit-quick-chips {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .chip-item {
+        justify-content: center;
+    }
+
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .unit-portfolio-grid {
+        grid-template-columns: 1fr;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .unit-carousel-inner .carousel-item {
+        height: 260px;
+    }
+
+    .unit-carousel-caption {
+        padding: 20px 15px 15px;
+    }
+
+    .unit-carousel-caption h4 {
+        font-size: 16px;
+    }
+
+    .unit-about-text h2 {
+        font-size: 26px;
+    }
+}
+

@@ -31,6 +31,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="unidades.css">
     
     <!-- Google tag (gtag.js) --> 
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10976269004"></script> 
@@ -80,6 +81,8 @@
             <nav class="nav-sidebar">
                 <ul>
                     <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="unidade1.html">Unidade 1</a></li>
+                    <li class="nav-item"><a href="unidade2.html">Unidade 2</a></li>
                     <li class="nav-item"><a href="#servicos">Valores</a></li>
                     <li class="nav-item"><a href="#espaco">Espaço</a></li>
                     <li class="nav-item icon-header">
@@ -123,6 +126,29 @@
                         </div>
                     </a>
                 </div>
+
+                <!-- Conhecer Unidades Dedicated Buttons -->
+                <div class="btn-unidades-group">
+                    <a href="unidade1.html" 
+                       class="btn-premium btn-secondary-unit"
+                       id="cta-hero-unidade1">
+                        <i class="fa-solid fa-store"></i>
+                        <div class="btn-text-content">
+                            <span class="btn-title">Conhecer Unidade 1</span>
+                            <span class="btn-subtitle">Santos Dumont • Fotos & Detalhes</span>
+                        </div>
+                    </a>
+                    <a href="unidade2.html" 
+                       class="btn-premium btn-secondary-unit"
+                       id="cta-hero-unidade2">
+                        <i class="fa-solid fa-store"></i>
+                        <div class="btn-text-content">
+                            <span class="btn-title">Conhecer Unidade 2</span>
+                            <span class="btn-subtitle">Redentora • Fotos & Detalhes</span>
+                        </div>
+                    </a>
+                </div>
+
                 <a onclick="return gtag_report_conversion('https://agendamentos.bestbarbers.app/barbershop/honoratobarbearia');" 
                    href="https://agendamentos.bestbarbers.app/barbershop/honoratobarbearia" 
                    class="btn-premium btn-primary-gold" 
@@ -347,6 +373,77 @@
 
     <hr>
 
+    <!-- Nossas Unidades Showcase Section -->
+    <section id="unidades" class="unidades-home-section">
+        <div class="container-2 unidades-home-container">
+            <div class="section-header-centered">
+                <span class="badge-tag-gold"><i class="fa-solid fa-location-dot"></i> DOIS ENDEREÇOS EXCLUSIVOS</span>
+                <h2>Nossas Unidades</h2>
+                <p>Escolha a barbearia mais conveniente para você em São José do Rio Preto e viva a experiência Honorato.</p>
+            </div>
+
+            <div class="unidades-cards-grid">
+                <!-- Unit 1 Card -->
+                <div class="unidade-showcase-card">
+                    <div class="unidade-card-media">
+                        <img src="imgs/local-1.webp" alt="Honorato Barbearia - Unidade 1 Santos Dumont">
+                        <span class="unidade-pill-badge">
+                            <i class="fa-solid fa-crown"></i> Unidade 1 • Santos Dumont
+                        </span>
+                    </div>
+                    <div class="unidade-card-body">
+                        <h3>Unidade 1 - Santos Dumont</h3>
+                        <span class="unidade-card-subtitle">A Pioneira • Tradição & Acolhimento</span>
+                        <p class="unidade-card-address">
+                            <i class="fa-solid fa-location-dot"></i> R. Bonfá Natale, 2066 - Santos Dumont
+                        </p>
+                        <p class="unidade-card-text">
+                            Nossa primeira unidade traz a essência autêntica da barbearia clássica, com ambiente acolhedor, mesa de sinuca para clientes, frigobar completo e estacionamento próprio gratuito na porta.
+                        </p>
+                        <ul class="unidade-features-list-mini">
+                            <li><i class="fa-solid fa-check"></i> Estacionamento privativo gratuito</li>
+                            <li><i class="fa-solid fa-check"></i> Lounge com mesa de sinuca oficial</li>
+                            <li><i class="fa-solid fa-check"></i> Barba clássica com toalha quente</li>
+                        </ul>
+                        <a href="unidade1.html" class="btn-conhecer-cta" id="btn-home-card-unidade1">
+                            <i class="fa-solid fa-arrow-right"></i> Conhecer Unidade 1
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Unit 2 Card -->
+                <div class="unidade-showcase-card">
+                    <div class="unidade-card-media">
+                        <img src="imgs/local-4.webp" alt="Honorato Barbearia - Unidade 2 Redentora">
+                        <span class="unidade-pill-badge modern">
+                            <i class="fa-solid fa-sparkles"></i> Unidade 2 • Redentora
+                        </span>
+                    </div>
+                    <div class="unidade-card-body">
+                        <h3>Unidade 2 - Redentora</h3>
+                        <span class="unidade-card-subtitle">Nova Unidade • Conceito Premium & VIP</span>
+                        <p class="unidade-card-address">
+                            <i class="fa-solid fa-location-dot"></i> R. Cel. Spínola de Castro, 4030 - Redentora
+                        </p>
+                        <p class="unidade-card-text">
+                            Nossa nova unidade contemporânea no coração da Redentora, equipada com poltronas ergonômicas reclináveis, iluminação de estúdio profissional, café gourmet e horário estendido até 20h.
+                        </p>
+                        <ul class="unidade-features-list-mini">
+                            <li><i class="fa-solid fa-check"></i> Localização nobre na Redentora</li>
+                            <li><i class="fa-solid fa-check"></i> Poltronas ergonômicas VIP & Café</li>
+                            <li><i class="fa-solid fa-check"></i> Horário estendido até as 20h</li>
+                        </ul>
+                        <a href="unidade2.html" class="btn-conhecer-cta" id="btn-home-card-unidade2">
+                            <i class="fa-solid fa-arrow-right"></i> Conhecer Unidade 2
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
     <!-- Schedule Action CTA Section -->
     <section class="agende">
         <div class="agende-content">
@@ -401,12 +498,17 @@
                 <p>R. Bonfá Natale, 2066</p>
                 <p>Santos Dumont</p>
                 <p>São José do Rio Preto - SP</p>
-                <a href="https://maps.google.com/?q=R.+Bonfá+Natale,+2066,+Santos+Dumont,+São+José+do+Rio+Preto+-+SP" 
-                   target="_blank" 
-                   rel="noopener" 
-                   class="btn-maps">
-                    <i class="fa-solid fa-location-arrow"></i> Ver no Mapa
-                </a>
+                <div class="final-div-actions">
+                    <a href="unidade1.html" class="btn-conhecer-mini" id="btn-final-conhecer-unidade1">
+                        <i class="fa-solid fa-circle-info"></i> Conhecer Unidade 1
+                    </a>
+                    <a href="https://maps.google.com/?q=R.+Bonfá+Natale,+2066,+Santos+Dumont,+São+José+do+Rio+Preto+-+SP" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn-maps">
+                        <i class="fa-solid fa-location-arrow"></i> Ver no Mapa
+                    </a>
+                </div>
             </div>
             
             <!-- Column 2: Unidade 2 -->
@@ -417,12 +519,17 @@
                 <p>Rua Coronel Spínola de Castro - 4030</p>
                 <p>Redentora</p>
                 <p>São José do Rio Preto - SP</p>
-                <a href="https://maps.google.com/?q=Rua+Coronel+Spínola+de+Castro,+4030,+São+José+do+Rio+Preto+-+SP"
-                    target="_blank"
-                    rel="noopener"
-                    class="btn-maps">
-                        <i class="fa-solid fa-location-arrow"></i> Ver no Mapa
-                </a>
+                <div class="final-div-actions">
+                    <a href="unidade2.html" class="btn-conhecer-mini" id="btn-final-conhecer-unidade2">
+                        <i class="fa-solid fa-circle-info"></i> Conhecer Unidade 2
+                    </a>
+                    <a href="https://maps.google.com/?q=Rua+Coronel+Spínola+de+Castro,+4030,+São+José+do+Rio+Preto+-+SP"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn-maps">
+                            <i class="fa-solid fa-location-arrow"></i> Ver no Mapa
+                    </a>
+                </div>
             </div>
 
             <!-- Column 3: Contact details -->
