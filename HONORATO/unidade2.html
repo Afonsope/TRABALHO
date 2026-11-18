@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unidade 2 - Redentora | Honorato Barbearia</title>
     <meta name="description" content="Conheça a Unidade 2 da Honorato Barbearia na Redentora, São José do Rio Preto. Nova unidade moderna com design contemporâneo, lounge executivo, café gourmet e atendimento VIP.">
-    <link rel="icon" href="imgs/logo-honorato.png" type="image/x-icon">
+    <link rel="icon" href="assets/imgs/logo-honorato.png" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -29,9 +29,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="unidades.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/unidades.css">
     
     <!-- Google tag (gtag.js) --> 
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10976269004"></script> 
@@ -70,7 +70,7 @@
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="imgs/logo-honorato.png" alt="Honorato Barbearia Logo">
+                    <img src="assets/imgs/logo-honorato.png" alt="Honorato Barbearia Logo">
                 </a>
             </div>
             <div class="menu-hamburguer" onclick="toggleMenu()" aria-label="Abrir Menu">
@@ -223,7 +223,7 @@
                 </div>
 
                 <div class="unit-about-card">
-                    <img src="imgs/local-4.webp" alt="Lounge e Salão Contemporâneo da Unidade 2 Redentora">
+                    <img src="assets/imgs/unidade2/foto-1.jpeg" alt="Lounge e Salão Contemporâneo da Unidade 2 Redentora">
                     <div class="unit-about-card-badge">
                         <div class="badge-icon-box">
                             <i class="fa-solid fa-crown"></i>
@@ -257,27 +257,43 @@
                             <button type="button" data-bs-target="#carouselUnidade2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselUnidade2" data-bs-slide-to="1" aria-label="Slide 2"></button>
                             <button type="button" data-bs-target="#carouselUnidade2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselUnidade2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselUnidade2" data-bs-slide-to="4" aria-label="Slide 5"></button>
                         </div>
                         <div class="carousel-inner unit-carousel-inner">
                             <div class="carousel-item active">
-                                <img src="imgs/local-4.webp" class="d-block w-100" alt="Salão Principal Contemporâneo - Unidade 2 Redentora">
+                                <img src="assets/imgs/unidade2/foto-1.jpeg" class="d-block w-100" alt="Salão Principal Contemporâneo - Unidade 2 Redentora">
                                 <div class="unit-carousel-caption">
                                     <h4>Salão Contemporâneo & Espaçoso</h4>
-                                    <p>Arquitetura moderna com piso e acabamentos de altíssimo padrão.</p>
+                                    <p>Arquitetura moderna com piso e acabamentos de altíssimo padrão na Redentora.</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="imgs/local-5.webp" class="d-block w-100" alt="Bancadas e Iluminação de Estúdio - Unidade 2 Redentora">
+                                <img src="assets/imgs/unidade2/foto-2.jpeg" class="d-block w-100" alt="Bancadas e Iluminação de Estúdio - Unidade 2 Redentora">
                                 <div class="unit-carousel-caption">
                                     <h4>Estações com Iluminação Profissional</h4>
                                     <p>Visagismo de precisão com espelhos iluminados e ferramentas de ponta.</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="imgs/cabelo-barba.jpg" class="d-block w-100" alt="Experiência Completa VIP - Unidade 2 Redentora">
+                                <img src="assets/imgs/unidade2/foto-3.jpeg" class="d-block w-100" alt="Lounge e Detalhes da Redentora">
                                 <div class="unit-carousel-caption">
-                                    <h4>Experiência Executiva & Barbaterapia</h4>
-                                    <p>Cuidado meticuloso em cada detalhe do seu cabelo e barba.</p>
+                                    <h4>Lounge Executivo & Conforto Acústico</h4>
+                                    <p>Privacidade e tranquilidade para clientes que buscam sofisticação.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/imgs/unidade2/foto-4.jpeg" class="d-block w-100" alt="Poltronas Ergonômicas VIP - Unidade 2 Redentora">
+                                <div class="unit-carousel-caption">
+                                    <h4>Poltronas Reclináveis Ergonômicas</h4>
+                                    <p>Máximo conforto e relaxamento durante todo o atendimento.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/imgs/unidade2/foto-5.jpeg" class="d-block w-100" alt="Espaço Café Gourmet - Unidade 2 Redentora">
+                                <div class="unit-carousel-caption">
+                                    <h4>Café Gourmet & Experiência VIP</h4>
+                                    <p>Grãos especiais e atendimento de alta classe no coração da Redentora.</p>
                                 </div>
                             </div>
                         </div>
@@ -292,6 +308,37 @@
                     </div>
                 </div>
 
+                <!-- More Angles of the Space -->
+                <div class="portfolio-subtitle-row">
+                    <h3><i class="fa-solid fa-camera"></i> Mais Ângulos do Espaço - Redentora</h3>
+                </div>
+
+                <div class="unit-portfolio-grid" style="margin-bottom: 45px;">
+                    <div class="unit-portfolio-card">
+                        <img src="assets/imgs/unidade2/foto-6.jpeg" alt="Estrutura Unidade 2 Redentora">
+                        <div class="portfolio-card-overlay">
+                            <h5>Design Contemporâneo</h5>
+                            <span>Linhas modernas & sofisticação</span>
+                        </div>
+                    </div>
+
+                    <div class="unit-portfolio-card">
+                        <img src="assets/imgs/unidade2/foto-7.jpeg" alt="Detalhes Unidade 2 Redentora">
+                        <div class="portfolio-card-overlay">
+                            <h5>Conceito Executivo</h5>
+                            <span>Padrão exclusivo Redentora</span>
+                        </div>
+                    </div>
+
+                    <div class="unit-portfolio-card">
+                        <img src="assets/imgs/cabelo-barba.jpg" alt="Experiência Completa VIP - Unidade 2 Redentora">
+                        <div class="portfolio-card-overlay">
+                            <h5>Experiência VIP</h5>
+                            <span>Atendimento personalizado</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Portfolio Grid: Cuts made at Unit 2 -->
                 <div class="portfolio-subtitle-row">
                     <h3><i class="fa-solid fa-scissors"></i> Trabalhos Realizados na Unidade 2</h3>
@@ -302,7 +349,7 @@
 
                 <div class="unit-portfolio-grid">
                     <div class="unit-portfolio-card">
-                        <img src="imgs/corte-4.webp" alt="Fade Texturizado Contemporâneo">
+                        <img src="assets/imgs/corte-4.webp" alt="Fade Texturizado Contemporâneo">
                         <div class="portfolio-card-overlay">
                             <h5>Fade Texturizado</h5>
                             <span>Estilo Contemporâneo & Definido</span>
@@ -310,7 +357,7 @@
                     </div>
 
                     <div class="unit-portfolio-card">
-                        <img src="imgs/corte-5.webp" alt="Corte Executivo Pompadour">
+                        <img src="assets/imgs/corte-5.webp" alt="Corte Executivo Pompadour">
                         <div class="portfolio-card-overlay">
                             <h5>Corte Executivo Refinado</h5>
                             <span>Alinhamento com Modelador Matte</span>
@@ -318,7 +365,7 @@
                     </div>
 
                     <div class="unit-portfolio-card">
-                        <img src="imgs/corte-6.webp" alt="Design de Barba & Contorno de Precisão">
+                        <img src="assets/imgs/corte-6.webp" alt="Design de Barba & Contorno de Precisão">
                         <div class="portfolio-card-overlay">
                             <h5>Barba Esculpida de Precisão</h5>
                             <span>Vapor de Ozônio & Acabamento Perfeito</span>
@@ -403,7 +450,7 @@
             <!-- Card 1: Cabelo -->
             <div class="card-s">
                 <div class="card-img-wrapper">
-                    <img src="imgs/cabelo.jpg" alt="Corte de Cabelo Unidade 2 Redentora">
+                    <img src="assets/imgs/cabelo.jpg" alt="Corte de Cabelo Unidade 2 Redentora">
                 </div>
                 <div class="card-content">
                     <h3>Cabelo</h3>
@@ -423,7 +470,7 @@
             <!-- Card 2: Barba -->
             <div class="card-s">
                 <div class="card-img-wrapper">
-                    <img src="imgs/barba.jpg" alt="Barba na Unidade 2 Redentora">
+                    <img src="assets/imgs/barba.jpg" alt="Barba na Unidade 2 Redentora">
                 </div>
                 <div class="card-content">
                     <h3>Barba</h3>
@@ -443,7 +490,7 @@
             <!-- Card 3: Combo Cabelo + Barba -->
             <div class="card-s">
                 <div class="card-img-wrapper">
-                    <img src="imgs/cabelo-barba.jpg" alt="Combo Completo Unidade 2 Redentora">
+                    <img src="assets/imgs/cabelo-barba.jpg" alt="Combo Completo Unidade 2 Redentora">
                 </div>
                 <div class="card-content">
                     <h3>Cabelo + Barba</h3>
@@ -625,7 +672,7 @@
         crossorigin="anonymous"></script>
     
     <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
