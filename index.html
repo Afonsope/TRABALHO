@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central de Projetos | Hub de Navegação</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --bg-card: rgba(18, 24, 38, 0.75);
+      --bg-card-hover: rgba(27, 36, 56, 0.95);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(99, 102, 241, 0.45);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+      --accent-cyan: #06b6d4;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+      --shadow-hover: 0 20px 35px -5px rgba(99, 102, 241, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      background-image: 
+        radial-gradient(at 10% 20%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+        radial-gradient(at 90% 80%, rgba(217, 70, 239, 0.12) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(6, 182, 212, 0.08) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: #a5b4fc;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px #22c55e;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      margin-bottom: 16px;
+    }
+
+    .gradient-text {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* CONTROLS (SEARCH & FILTERS) */
+    .controls-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .search-box {
+      position: relative;
+      width: 100%;
+    }
+
+    .search-box svg {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: var(--text-muted);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      pointer-events: none;
+      transition: stroke 0.2s;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 16px 20px 16px 52px;
+      background: rgba(18, 24, 38, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: var(--text-main);
+      font-size: 1rem;
+      outline: none;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+      transition: all 0.25s ease;
+    }
+
+    .search-input:focus {
+      border-color: #6366f1;
+      background: rgba(22, 30, 48, 0.95);
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+    }
+
+    .search-input:focus + svg {
+      stroke: #818cf8;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      padding: 8px 18px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+    }
+
+    .filter-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: #6366f1;
+      color: #c7d2fe;
+      font-weight: 600;
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding: 0 4px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 24px;
+    }
+
+    /* CARD */
+    .card {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(14px);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                  box-shadow 0.3s ease, 
+                  border-color 0.3s ease, 
+                  background-color 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent-gradient);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      background-color: var(--bg-card-hover);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #818cf8;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover .card-icon {
+      background: var(--accent-gradient);
+      color: #ffffff;
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+    }
+
+    .card-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke-width: 2;
+      stroke: currentColor;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .card-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .category-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-cyan);
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #ffffff;
+      margin-bottom: 8px;
+      word-break: break-word;
+    }
+
+    .card-meta {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .path-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.775rem;
+      color: #cbd5e1;
+    }
+
+    .card-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .action-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #818cf8;
+      transition: gap 0.2s ease, color 0.2s ease;
+    }
+
+    .action-text svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 2;
+      stroke: currentColor;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .card:hover .action-text {
+      color: #c7d2fe;
+      gap: 12px;
+    }
+
+    /* EMPTY STATE */
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 64px 20px;
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: 20px;
+      display: none;
+    }
+
+    .no-results svg {
+      width: 48px;
+      height: 48px;
+      stroke: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .no-results h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .no-results p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 32px 16px 60px;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Workspace Hub
+      </div>
+      <h1>Portfólio de <span class="gradient-text">Projetos Web</span></h1>
+      <p class="subtitle">Acesse rapidamente as páginas e sites desenvolvidos em cada pasta do repositório.</p>
+    </header>
+
+    <div class="controls-wrapper">
+      <div class="search-box">
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar por nome, pasta ou segmento..." autocomplete="off">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="servicos">Serviços & Negócios</button>
+        <button class="filter-btn" data-filter="saude">Saúde & Estilo</button>
+        <button class="filter-btn" data-filter="comercio">Comércio & Vendas</button>
+        <button class="filter-btn" data-filter="climatizacao">Climatização</button>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <span id="projectCount">Exibindo 14 projetos</span>
+      <span>Clique em qualquer card para abrir</span>
+    </div>
+
+    <div class="grid" id="projectGrid">
+
+      <!-- ADIPE BATERIAS -->
+      <a href="ADIPE%20BATERIAS/index.html" class="card" data-category="comercio" data-title="adipé baterias adipe são josé do rio preto auto automotivo carro" data-folder="ADIPE BATERIAS">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Bateria/Energia -->
+              <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Comércio & Auto</span>
+              <h2 class="card-title">Adipé Baterias</h2>
+            </div>
+          </div>
+          <p class="card-meta">Baterias automotivas para carros, motos e utilitários em São José do Rio Preto.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 ADIPE BATERIAS</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- AGENCIA_FLAUZINO -->
+      <a href="AGENCIA_FLAUZINO/index.html" class="card" data-category="servicos" data-title="agencia flauzino marketing digital web design" data-folder="AGENCIA_FLAUZINO">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Foguete / Agência -->
+              <svg viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Agência & Marketing</span>
+              <h2 class="card-title">Agência Flauzino</h2>
+            </div>
+          </div>
+          <p class="card-meta">Soluções completas de marketing digital, estratégias de crescimento e branding.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 AGENCIA_FLAUZINO</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- BELLA CORT -->
+      <a href="BELLA%20CORT/index.html" class="card" data-category="servicos" data-title="bellacort cortinas persianas sob medida alto padrão decoração arquitetura interiores" data-folder="BELLA CORT">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Cortinas / Casa -->
+              <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"></path><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Design & Decoração</span>
+              <h2 class="card-title">Bellacort</h2>
+            </div>
+          </div>
+          <p class="card-meta">Cortinas e persianas sob medida de alto padrão para ambientes exclusivos.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 BELLA CORT</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- DR ANDRE REDA -->
+      <a href="DR%20ANDRE%20REDA/index.html" class="card" data-category="saude" data-title="dr andre reda medico saúde consulta medicina" data-folder="DR ANDRE REDA">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Saúde / Medicina -->
+              <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Saúde & Medicina</span>
+              <h2 class="card-title">Dr. André Reda</h2>
+            </div>
+          </div>
+          <p class="card-meta">Atendimento médico humanizado, especialista com foco na saúde integral do paciente.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 DR ANDRE REDA</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- FAB_SERVICES_USA -->
+      <a href="FAB_SERVICES_USA/index.html" class="card" data-category="servicos" data-title="fab services usa painting pintura residencial comercial reforma" data-folder="FAB_SERVICES_USA">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Pintura / Serviços -->
+              <svg viewBox="0 0 24 24"><path d="m19 11-8-8-8.6 8.6a2 2 0 0 0 0 2.8l5.2 5.2c.8.8 2 .8 2.8 0L19 11Z"></path><path d="m5 2 5 5"></path><path d="M2 13h15"></path><path d="M22 20a2 2 0 1 1-4 0c0-1.6 1.7-2.4 2-4 .3 1.6 2 2.4 2 4Z"></path></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Serviços Gerais</span>
+              <h2 class="card-title">FAB Services USA</h2>
+            </div>
+          </div>
+          <p class="card-meta">Professional Residential & Commercial Painting Services nos Estados Unidos.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 FAB_SERVICES_USA</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- FLAUZINO -->
+      <a href="FLAUZINO/index.html" class="card" data-category="servicos" data-title="flauzino assessoria consultoria landing page" data-folder="FLAUZINO">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Briefcase -->
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Corporativo</span>
+              <h2 class="card-title">Flauzino</h2>
+            </div>
+          </div>
+          <p class="card-meta">Apresentação institucional e serviços corporativos de alta performance.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 FLAUZINO</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- HONORATO -->
+      <a href="HONORATO/index.html" class="card" data-category="saude" data-title="honorato barbearia exclusividade e estilo barba cabelo corte" data-folder="HONORATO">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Tesoura / Estilo -->
+              <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Barbearia & Estilo</span>
+              <h2 class="card-title">Honorato Barbearia</h2>
+            </div>
+          </div>
+          <p class="card-meta">Exclusividade, estilo e conforto em serviços premium de barba e cabelo.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 HONORATO</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- HPIOVANI -->
+      <a href="HPIOVANI/index.html" class="card" data-category="servicos" data-title="hpiovani advocacia direito jurídico advogados escritório" data-folder="HPIOVANI">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Balança / Direito -->
+              <svg viewBox="0 0 24 24"><path d="M12 3v18"></path><path d="m3 7 9-4 9 4"></path><path d="M6 10a4 4 0 0 0 8 0"></path><path d="M14 10a4 4 0 0 0 8 0"></path><path d="M4 21h16"></path></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Jurídico & Direito</span>
+              <h2 class="card-title">HPiovani Advocacia</h2>
+            </div>
+          </div>
+          <p class="card-meta">Escritório especializado com foco em assessoria e representação jurídica estratégica.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 HPIOVANI</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- LAVIMOVEIS -->
+      <a href="LAVIMOVEIS/index.html" class="card" data-category="servicos" data-title="lavimoveis arquitetura imoveis imobiliaria projetos urbanismo" data-folder="LAVIMOVEIS">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Prédio / Arquitetura -->
+              <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="9" y1="22" x2="9" y2="22.01"></line><line x1="15" y1="22" x2="15" y2="22.01"></line><line x1="9" y1="6" x2="9" y2="6.01"></line><line x1="15" y1="6" x2="15" y2="6.01"></line><line x1="9" y1="10" x2="9" y2="10.01"></line><line x1="15" y1="10" x2="15" y2="10.01"></line><line x1="9" y1="14" x2="9" y2="14.01"></line><line x1="15" y1="14" x2="15" y2="14.01"></line><line x1="9" y1="18" x2="9" y2="18.01"></line><line x1="15" y1="18" x2="15" y2="18.01"></line></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Arquitetura & Imóveis</span>
+              <h2 class="card-title">Lavimóveis Arquitetura</h2>
+            </div>
+          </div>
+          <p class="card-meta">Projetos arquitetônicos contemporâneos, loteamentos e soluções imobiliárias.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 LAVIMOVEIS</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- MARI E EDU SAPATOS -->
+      <a href="MARI%20E%20EDU%20SAPATOS/index.html" class="card" data-category="comercio" data-title="mari e edu sapatos luigi sapataria calçados couro moda calçado" data-folder="MARI E EDU SAPATOS">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Sacola / Sapato -->
+              <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Moda & Calçados</span>
+              <h2 class="card-title">Luigi Sapataria</h2>
+            </div>
+          </div>
+          <p class="card-meta">Calçados artesanais de alto padrão, conforto, elegância e acabamento refinado.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 MARI E EDU SAPATOS</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- OTICA IMAGE -->
+      <a href="OTICA%20IMAGE/index.html" class="card" data-category="comercio" data-title="otica image óculos prontos em 1 hora armação lentes visão" data-folder="OTICA IMAGE">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Óculos / Olho -->
+              <svg viewBox="0 0 24 24"><circle cx="6" cy="14" r="4"></circle><circle cx="18" cy="14" r="4"></circle><line x1="10" y1="14" x2="14" y2="14"></line><path d="M18 10h1.5a3.5 3.5 0 0 1 3.5 3.5V14"></path><path d="M6 10H4.5A3.5 3.5 0 0 0 1 13.5V14"></path></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Ótica & Visão</span>
+              <h2 class="card-title">Ótica Image</h2>
+            </div>
+          </div>
+          <p class="card-meta">Seus óculos prontos em até 1 hora com tecnologia digital de ponta e precisão.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 OTICA IMAGE</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- OUTROS / NEAR (ArcTech) -->
+      <a href="OUTROS/NEAR/index.html" class="card" data-category="climatizacao" data-title="outros near arctech climatização ar condicionado conforto termico" data-folder="OUTROS/NEAR">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Climatização / Vento -->
+              <svg viewBox="0 0 24 24"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"></path><path d="M9.6 4.6A2 2 0 1 1 11 8H2"></path><path d="M12.6 19.4A2 2 0 1 0 14 16H2"></path></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Climatização</span>
+              <h2 class="card-title">ArcTech Climatização</h2>
+            </div>
+          </div>
+          <p class="card-meta">Climatização que transforma ambientes: soluções eficientes para residências e empresas.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 OUTROS / NEAR</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- OUTROS / NEAR - PROTOTIPO -->
+      <a href="OUTROS/NEAR%20-%20PROTOTIPO/index.html" class="card" data-category="climatizacao" data-title="outros near prototipo climatização profissional" data-folder="OUTROS/NEAR - PROTOTIPO">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Raio / Protótipo -->
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polygon points="12 6 12 12 16 14"></polygon></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Protótipo & Testes</span>
+              <h2 class="card-title">Near — Protótipo</h2>
+            </div>
+          </div>
+          <p class="card-meta">Versão de teste e prototipagem da plataforma Near de climatização profissional.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 OUTROS / NEAR - PROTOTIPO</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- OUTROS / NEAR - VENDAS (ArcTech Academy) -->
+      <a href="OUTROS/NEAR%20-%20VENDAS/index.html" class="card" data-category="climatizacao" data-title="outros near vendas arctech academy curso profissional de climatizacao" data-folder="OUTROS/NEAR - VENDAS">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">
+              <!-- Certificado / Academy -->
+              <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </div>
+            <div class="card-info">
+              <span class="category-tag">Educação & Vendas</span>
+              <h2 class="card-title">ArcTech Academy</h2>
+            </div>
+          </div>
+          <p class="card-meta">Curso Profissional de Climatização: formação completa e prática para técnicos instaladores.</p>
+        </div>
+        <div class="card-bottom">
+          <div class="path-pill">📁 OUTROS / NEAR - VENDAS</div>
+          <span class="action-text">
+            Abrir página
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Empty State se a busca não encontrar nada -->
+      <div id="noResults" class="no-results">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <h3>Nenhum projeto encontrado</h3>
+        <p>Tente ajustar os termos da sua pesquisa ou mudar o filtro selecionado.</p>
+      </div>
+
+    </div>
+
+    <footer>
+      <p>Gerenciador de Projetos Web &bull; Navegação interna do repositório</p>
+    </footer>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+    const noResults = document.getElementById('noResults');
+    const projectCount = document.getElementById('projectCount');
+
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    function normalizeText(text) {
+      return text.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function updateView() {
+      let visibleCount = 0;
+      const normalizedQuery = normalizeText(searchQuery);
+
+      cards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const titleData = normalizeText(card.getAttribute('data-title') || '');
+        const folderData = normalizeText(card.getAttribute('data-folder') || '');
+        const cardTitle = normalizeText(card.querySelector('.card-title')?.innerText || '');
+
+        const matchesFilter = (currentFilter === 'all') || (category === currentFilter);
+        const matchesSearch = !normalizedQuery || 
+                              titleData.includes(normalizedQuery) || 
+                              folderData.includes(normalizedQuery) || 
+                              cardTitle.includes(normalizedQuery);
+
+        if (matchesFilter && matchesSearch) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (visibleCount === 0) {
+        noResults.style.display = 'block';
+        projectCount.innerText = 'Nenhum projeto correspondente';
+      } else {
+        noResults.style.display = 'none';
+        projectCount.innerText = `Exibindo ${visibleCount} ${visibleCount === 1 ? 'projeto' : 'projetos'}`;
+      }
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      updateView();
+    });
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.getAttribute('data-filter');
+        updateView();
+      });
+    });
+  </script>
+</body>
+</html>
